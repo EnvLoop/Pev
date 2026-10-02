@@ -1,0 +1,11 @@
+## Context
+{state}
+
+## Question
+{instructions}
+
+## Options
+{options}
+
+## How to answer
+Base the answer only on the context. When a later statement in the context changes an earlier one, the later one holds. Respond with {answer}; do not explain.

@@ -1,0 +1,8 @@
+{
+  "style_id": "pub-verbose-journal",
+  "voice": "a warm first-person diary-like log the user keeps and shares with their assistant",
+  "format": "flowing paragraphs grouped by date headings like 'Tuesday, 5 March 2024'; rules phrased as the user's own resolutions; the request at the end as 'Note to assistant:' followed by the pending item",
+  "language_mix": "English only",
+  "verbosity": "verbose; long sentences with some personal colour that adds no new facts",
+  "notes": "Do not invent events, opinions or reasons. Personal colour must be generic (weather, mood) and must not bear on any rule, preference or option."
+}

@@ -1,0 +1,51 @@
+cff-version: 1.2.0
+message: "If you use this software, data or model, please cite the technical report."
+title: "Pev: calibrated fast decisions for a personal agent with long-term memory"
+contact:
+  - name: "EnvLoop Research"
+    email: "research@envloop.ai"
+authors:
+  - name: "EnvLoop Research"
+    email: "research@envloop.ai"
+repository-code: "https://github.com/EnvLoop/Pev"
+license: Apache-2.0
+version: "1.0.0"
+preferred-citation:
+  type: report
+  title: "Pev: A Calibrated Fast-Decision Model for Personal Agents"
+  authors:
+    - name: "EnvLoop Research"
+      email: "research@envloop.ai"
+  institution:
+    name: "EnvLoop"
+  url: "https://github.com/EnvLoop/Pev/blob/main/docs/tech-report/pev.pdf"
+references:
+  - type: article
+    title: "Bridging Language and Items for Retrieval and Recommendation"
+    authors: [{family-names: Hou, given-names: Yupeng}, {name: "et al."}]
+    year: 2024
+    identifiers: [{type: other, value: "arXiv:2403.03952"}]
+  - type: conference-paper
+    title: "UCTopic: Unsupervised Contrastive Learning for Phrase Representations and Topic Mining"
+    authors: [{family-names: Li, given-names: Jiacheng}, {family-names: Shang, given-names: Jingbo}, {family-names: McAuley, given-names: Julian}]
+    year: 2022
+    conference: {name: "ACL 2022"}
+  - type: conference-paper
+    title: "Personalized Showcases: Generating Multi-Modal Explanations for Recommendations"
+    authors: [{family-names: Yan, given-names: An}, {name: "et al."}]
+    year: 2023
+    conference: {name: "SIGIR 2023"}
+  - type: conference-paper
+    title: "The Enron Corpus: A New Dataset for Email Classification Research"
+    authors: [{family-names: Klimt, given-names: Bryan}, {family-names: Yang, given-names: Yiming}]
+    year: 2004
+    conference: {name: "ECML 2004"}
+  - type: software
+    title: "Kev"
+    authors: [{family-names: Palmer, given-names: Jared}]
+    repository-code: "https://github.com/jaredpalmer/kev"
+  - type: data
+    title: "OpenFlights airport, airline and route data"
+    authors: [{name: "OpenFlights"}]
+    url: "https://openflights.org/data.php"
+    license: ODbL-1.0

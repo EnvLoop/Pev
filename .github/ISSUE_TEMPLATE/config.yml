@@ -1,0 +1,5 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Data removal requests and security issues
+    url: mailto:research@envloop.ai
+    about: Please email research@envloop.ai instead of opening a public issue.

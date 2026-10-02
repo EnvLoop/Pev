@@ -1,0 +1,8 @@
+{
+  "style_id": "pub-mixed-sources",
+  "voice": "a dump of several context sources the assistant pulled together: a calendar export, a settings page, a few chat snippets and memory notes",
+  "format": "sections labelled like '--- settings ---', '--- calendar.ics ---', '--- chat ---', '--- memory ---', '--- inbox ---', each in its own native format; the pending item in its own final section",
+  "language_mix": "mostly English; one or two chat snippets may be in Chinese, but VERBATIM strings stay exactly as given",
+  "verbosity": "medium; heterogeneous",
+  "notes": "Vary date formats across sections (ISO in calendar, 'Mar 5' in chat, '5 March 2024' in memory) but always keep each dated item's full date recoverable."
+}

@@ -1,0 +1,6 @@
+{state}
+
+Question: {instructions}
+{options}
+
+Answer with {answer} only.

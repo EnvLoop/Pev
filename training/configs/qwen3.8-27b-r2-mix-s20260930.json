@@ -1,0 +1,23 @@
+{
+  "_comment": "Hyper-parameters of the released adapter (run r2-mix-s20260930), as used by training/train_text_choice.py.",
+  "model": "Qwen/Qwen3.8-27B",
+  "revision": "1d4bf0f2ff6012fd82039f2fa52739d0dd7c60c0",
+  "template": "direct",
+  "original_train_rows_sha256": "046a2ddb1c3e9a24cd3776eaa7d17eb0c9e7d54e21afc477e024f7854067cf34",
+  "original_train_rows": 6201,
+  "lora": {
+    "r": 16,
+    "alpha": 32,
+    "dropout": 0.05,
+    "target_modules": "model\\.layers\\.\\d+\\.(?:self_attn\\.(?:q_proj|k_proj|v_proj|o_proj)|linear_attn\\.(?:in_proj_qkv|in_proj_z|in_proj_a|in_proj_b|out_proj)|mlp\\.(?:gate_proj|up_proj|down_proj))"
+  },
+  "learning_rate": 5e-05,
+  "lr_scheduler": "cosine",
+  "warmup_steps": 24,
+  "max_steps": 776,
+  "save_steps": 250,
+  "per_device_batch_size": 1,
+  "gradient_accumulation_steps": 8,
+  "max_length": 12288,
+  "seed": 20260930
+}

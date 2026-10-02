@@ -1,0 +1,8 @@
+{
+  "style_id": "pub-memory-notes",
+  "voice": "the assistant's private memory store, written in third person about the user",
+  "format": "one memory note per line, each prefixed with a note id and a created date like 'mem#0142 (2024-03-05):'; rules as 'RULE:' lines; pending item under a 'TODO' header",
+  "language_mix": "English only",
+  "verbosity": "terse, telegraphic fragments; abbreviations like 'pref', 'w/', 'approx' are fine outside VERBATIM strings",
+  "notes": "Group notes loosely by topic but never merge two notes into one."
+}

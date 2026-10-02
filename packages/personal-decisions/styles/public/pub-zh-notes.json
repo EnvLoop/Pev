@@ -1,0 +1,8 @@
+{
+  "style_id": "pub-zh-notes",
+  "voice": "助理的中文工作笔记, third person about the user (用户)",
+  "format": "中文小标题 (如 【偏好】【规则】【日程】【联系人】【待处理】) followed by numbered items; the pending item and all its options go under 【待处理】",
+  "language_mix": "mostly Simplified Chinese; English only where VERBATIM strings, product names or place names require it",
+  "verbosity": "medium; complete sentences",
+  "notes": "Dates as 2024年3月5日 in prose, but copy any VERBATIM date string exactly as given."
+}

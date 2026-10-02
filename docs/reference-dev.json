@@ -1,0 +1,408 @@
+{
+  "api_accounting": {
+    "Jev jev-1.13.0": {
+      "calls": null,
+      "input_tokens": 1424343,
+      "model": "jev-1.13.0",
+      "output_tokens": null,
+      "questions": 1626,
+      "reasoning_tokens": null,
+      "records": 630,
+      "requests": 630,
+      "seconds": 59.8,
+      "served_models": [
+        "jev-1.13.0"
+      ],
+      "unscorable": [],
+      "usd_estimated": 0.059822406
+    },
+    "gpt-6-astra": {
+      "calls": 630,
+      "input_tokens": 1155220,
+      "model": "gpt-6-astra",
+      "output_tokens": 77222,
+      "questions": 1626,
+      "reasoning_tokens": 4766,
+      "records": 630,
+      "requests": 630,
+      "seconds": 750.0,
+      "served_models": [
+        "gpt-6-astra"
+      ],
+      "unscorable": [],
+      "usd_estimated": null
+    }
+  },
+  "dev_sha256": "6f344562037ad78fd3b572de87c47d022f8df62c6ded8c30fc953660c313f48c",
+  "n_scorable": 1409,
+  "notes": [
+    "B0/4B/Kev/adapter: VAL-fitted temperature; Jev/astra: probabilities as returned (T=1, no VAL fit), so their Brier/ECE are uncalibrated; accuracy is temperature-invariant.",
+    "Paired bootstrap: 10,000 state-cluster resamples, seed 20260930, family-macro accuracy."
+  ],
+  "paired_adapter_vs_api_reference": {
+    "adapter - Jev jev-1.13.0": {
+      "ci95": [
+        0.10391964838105094,
+        0.14046683261860402
+      ],
+      "clusters": 625,
+      "delta": 0.12216374139892061,
+      "families": {
+        "apply_memory": {
+          "ci95": [
+            0.02777777777777779,
+            0.09009009009009006
+          ],
+          "delta": 0.05633802816901412
+        },
+        "forgotten_violation": {
+          "ci95": [
+            0.0,
+            0.015625
+          ],
+          "delta": 0.004878048780487809
+        },
+        "needs_approval": {
+          "ci95": [
+            0.037634408602150504,
+            0.10994895287958119
+          ],
+          "delta": 0.07216494845360821
+        },
+        "notify_level": {
+          "ci95": [
+            0.28876473248729606,
+            0.4358974358974359
+          ],
+          "delta": 0.3608247422680412
+        },
+        "pick_option": {
+          "ci95": [
+            0.005434048178613366,
+            0.15343915343915343
+          ],
+          "delta": 0.08121827411167509
+        },
+        "route": {
+          "ci95": [
+            0.07582758868303893,
+            0.17142857142857149
+          ],
+          "delta": 0.12182741116751261
+        },
+        "share_ok": {
+          "ci95": [
+            0.10952380952380958,
+            0.20833776595744677
+          ],
+          "delta": 0.1578947368421052
+        }
+      },
+      "p_one_sided": 9.999000099990002e-05
+    },
+    "adapter - gpt-6-astra": {
+      "ci95": [
+        0.01118460098132193,
+        0.04175273700651751
+      ],
+      "clusters": 625,
+      "delta": 0.026501617183462976,
+      "families": {
+        "apply_memory": {
+          "ci95": [
+            0.004784688995215336,
+            0.04591836734693877
+          ],
+          "delta": 0.023474178403755874
+        },
+        "forgotten_violation": {
+          "ci95": [
+            0.0,
+            0.015706806282722474
+          ],
+          "delta": 0.004878048780487809
+        },
+        "needs_approval": {
+          "ci95": [
+            -0.015306122448979553,
+            0.015306122448979664
+          ],
+          "delta": 0.0
+        },
+        "notify_level": {
+          "ci95": [
+            0.019228468899521466,
+            0.14796390778533627
+          ],
+          "delta": 0.08247422680412364
+        },
+        "pick_option": {
+          "ci95": [
+            -0.06349206349206349,
+            0.09424083769633507
+          ],
+          "delta": 0.015228426395939076
+        },
+        "route": {
+          "ci95": [
+            0.0050000000000000044,
+            0.07027027027027033
+          ],
+          "delta": 0.035532994923857864
+        },
+        "share_ok": {
+          "ci95": [
+            0.004854368932038833,
+            0.04694835680751175
+          ],
+          "delta": 0.02392344497607657
+        }
+      },
+      "p_one_sided": 0.0006999300069993001
+    }
+  },
+  "predictors": {
+    "B0 Qwen3.8-27B": {
+      "families": {
+        "apply_memory": {
+          "accuracy": 0.8497652582159625,
+          "n_scored": 213
+        },
+        "forgotten_violation": {
+          "accuracy": 0.9658536585365853,
+          "n_scored": 205
+        },
+        "needs_approval": {
+          "accuracy": 0.8917525773195877,
+          "n_scored": 194
+        },
+        "notify_level": {
+          "accuracy": 0.5154639175257731,
+          "n_scored": 194
+        },
+        "pick_option": {
+          "accuracy": 0.3756345177664975,
+          "n_scored": 197
+        },
+        "route": {
+          "accuracy": 0.9187817258883249,
+          "n_scored": 197
+        },
+        "share_ok": {
+          "accuracy": 0.84688995215311,
+          "n_scored": 209
+        }
+      },
+      "macro_accuracy": 0.7663059439151202,
+      "macro_brier": 0.2612919835379392,
+      "macro_ece": 0.07446378189394998,
+      "safety_fn_rate": {
+        "forgotten_violation": 0.06862745098039216,
+        "needs_approval": 0.020618556701030927,
+        "share_ok": 0.04807692307692308
+      }
+    },
+    "Jev jev-1.13.0": {
+      "families": {
+        "apply_memory": {
+          "accuracy": 0.9436619718309859,
+          "n_scored": 213
+        },
+        "forgotten_violation": {
+          "accuracy": 0.9951219512195122,
+          "n_scored": 205
+        },
+        "needs_approval": {
+          "accuracy": 0.9226804123711341,
+          "n_scored": 194
+        },
+        "notify_level": {
+          "accuracy": 0.5515463917525774,
+          "n_scored": 194
+        },
+        "pick_option": {
+          "accuracy": 0.3756345177664975,
+          "n_scored": 197
+        },
+        "route": {
+          "accuracy": 0.868020304568528,
+          "n_scored": 197
+        },
+        "share_ok": {
+          "accuracy": 0.8373205741626795,
+          "n_scored": 209
+        }
+      },
+      "macro_accuracy": 0.7848551605245592,
+      "macro_brier": 0.2787153394406693,
+      "macro_ece": 0.11973092382632985,
+      "safety_fn_rate": {
+        "forgotten_violation": 0.0,
+        "needs_approval": 0.0,
+        "share_ok": 0.27884615384615385
+      }
+    },
+    "Kev-27B": {
+      "families": {
+        "apply_memory": {
+          "accuracy": 0.971830985915493,
+          "n_scored": 213
+        },
+        "forgotten_violation": {
+          "accuracy": 1.0,
+          "n_scored": 205
+        },
+        "needs_approval": {
+          "accuracy": 0.9536082474226805,
+          "n_scored": 194
+        },
+        "notify_level": {
+          "accuracy": 0.5773195876288659,
+          "n_scored": 194
+        },
+        "pick_option": {
+          "accuracy": 0.39593908629441626,
+          "n_scored": 197
+        },
+        "route": {
+          "accuracy": 0.9086294416243654,
+          "n_scored": 197
+        },
+        "share_ok": {
+          "accuracy": 0.9617224880382775,
+          "n_scored": 209
+        }
+      },
+      "macro_accuracy": 0.8241499767034426,
+      "macro_brier": 0.21295314620964806,
+      "macro_ece": 0.07462099296017496,
+      "safety_fn_rate": {
+        "forgotten_violation": 0.0,
+        "needs_approval": 0.0,
+        "share_ok": 0.07692307692307693
+      }
+    },
+    "Qwen3.5-4B": {
+      "families": {
+        "apply_memory": {
+          "accuracy": 0.7370892018779343,
+          "n_scored": 213
+        },
+        "forgotten_violation": {
+          "accuracy": 0.7365853658536585,
+          "n_scored": 205
+        },
+        "needs_approval": {
+          "accuracy": 0.6855670103092784,
+          "n_scored": 194
+        },
+        "notify_level": {
+          "accuracy": 0.5979381443298969,
+          "n_scored": 194
+        },
+        "pick_option": {
+          "accuracy": 0.3401015228426396,
+          "n_scored": 197
+        },
+        "route": {
+          "accuracy": 0.7309644670050761,
+          "n_scored": 197
+        },
+        "share_ok": {
+          "accuracy": 0.6363636363636364,
+          "n_scored": 209
+        }
+      },
+      "macro_accuracy": 0.6378013355117315,
+      "macro_brier": 0.40750524638167207,
+      "macro_ece": 0.06835146859386912,
+      "safety_fn_rate": {
+        "forgotten_violation": 0.5196078431372549,
+        "needs_approval": 0.061855670103092786,
+        "share_ok": 0.5192307692307693
+      }
+    },
+    "adapter r2-mix-s20260930": {
+      "families": {
+        "apply_memory": {
+          "accuracy": 1.0,
+          "n_scored": 213
+        },
+        "forgotten_violation": {
+          "accuracy": 1.0,
+          "n_scored": 205
+        },
+        "needs_approval": {
+          "accuracy": 0.9948453608247423,
+          "n_scored": 194
+        },
+        "notify_level": {
+          "accuracy": 0.9123711340206185,
+          "n_scored": 194
+        },
+        "pick_option": {
+          "accuracy": 0.45685279187817257,
+          "n_scored": 197
+        },
+        "route": {
+          "accuracy": 0.9898477157360406,
+          "n_scored": 197
+        },
+        "share_ok": {
+          "accuracy": 0.9952153110047847,
+          "n_scored": 209
+        }
+      },
+      "macro_accuracy": 0.9070189019234798,
+      "macro_brier": 0.13087226899936813,
+      "macro_ece": 0.06639054525364892,
+      "safety_fn_rate": {
+        "forgotten_violation": 0.0,
+        "needs_approval": 0.0,
+        "share_ok": 0.009615384615384616
+      }
+    },
+    "gpt-6-astra": {
+      "families": {
+        "apply_memory": {
+          "accuracy": 0.9765258215962441,
+          "n_scored": 213
+        },
+        "forgotten_violation": {
+          "accuracy": 0.9951219512195122,
+          "n_scored": 205
+        },
+        "needs_approval": {
+          "accuracy": 0.9948453608247423,
+          "n_scored": 194
+        },
+        "notify_level": {
+          "accuracy": 0.8298969072164949,
+          "n_scored": 194
+        },
+        "pick_option": {
+          "accuracy": 0.4416243654822335,
+          "n_scored": 197
+        },
+        "route": {
+          "accuracy": 0.9543147208121827,
+          "n_scored": 197
+        },
+        "share_ok": {
+          "accuracy": 0.9712918660287081,
+          "n_scored": 209
+        }
+      },
+      "macro_accuracy": 0.8805172847400168,
+      "macro_brier": 0.17752235758541077,
+      "macro_ece": 0.0747869571946458,
+      "safety_fn_rate": {
+        "forgotten_violation": 0.00980392156862745,
+        "needs_approval": 0.0,
+        "share_ok": 0.009615384615384616
+      }
+    }
+  },
+  "schema": "muse-dev-reference-comparison/1",
+  "template": "direct"
+}

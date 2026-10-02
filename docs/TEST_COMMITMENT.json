@@ -1,0 +1,532 @@
+{
+  "public_copy_note": "This public copy omits internal infrastructure details; the data-file hashes are unchanged. The original commitment (SHA-256 0b125c593d24a9502fa5bf3e25712c3ebf92d705e1a8bb57780c8b73561b0fbb, cited by amendment 7 and docs/TEST_RESULTS.json) was written before any model ran on TEST.",
+  "schema": "muse-test-commitment-v1",
+  "created_at": "2026-10-01T15:11:22+00:00",
+  "preregistration": {
+    "amendment": 6,
+    "commit": "cb4c03a",
+    "sha256": "d42ddda19aaa49d9a294e96539a407bfa6cec795904ad67e73b9a36683ed5d87"
+  },
+  "test": {
+    "definition": "TEST = test.jsonl = byte concatenation of release/test-a.release.jsonl then release/test-b.release.jsonl (pseudonymized by export-release; published as test_a.jsonl and test_b.jsonl); test.prompts.jsonl (id, state, questions: type/instructions/criteria/src) and test.labels.jsonl (id, state_id, half, renderer, style_id, per-question family/label/soft_label/variant) are derived from it",
+    "files": {
+      "test.jsonl": {
+        "sha256": "131d092796bb518b3134eef5ca9fe3f86ec9b6ae5535de6483f8e47a25e279a3",
+        "bytes": 8746328,
+        "count": 980
+      },
+      "test.prompts.jsonl": {
+        "sha256": "3bceaa41e3dee6a985868c37fdcfcee7059be5eee3c7303ad8243a7e3a03f64d",
+        "bytes": 7575953,
+        "count": 980
+      },
+      "test.labels.jsonl": {
+        "sha256": "ecddda12dcefe8a827ffdc20e87047db69f6c35922b67645041e35014d01af5f",
+        "bytes": 382238,
+        "count": 980
+      },
+      "release/test-a.release.jsonl": {
+        "sha256": "b2fade9778c1bb61472bb9eeb6635c520f0c3b90e3fe5352a66b33c1a56fef26",
+        "bytes": 4616236,
+        "count": 490,
+        "published_as": "test_a.jsonl"
+      },
+      "release/test-b.release.jsonl": {
+        "sha256": "d7907b2a966ba8706203640383a4e7cf641fee73bf935ed3319f0789a1a31d8a",
+        "bytes": 4130092,
+        "count": 490,
+        "published_as": "test_b.jsonl"
+      }
+    },
+    "records": 980,
+    "questions": 2506,
+    "scorable_questions": 2156,
+    "families": {
+      "apply_memory": 302,
+      "forgotten_violation": 301,
+      "needs_approval": 372,
+      "notify_level": 446,
+      "pick_option": 340,
+      "route": 339,
+      "share_ok": 406
+    },
+    "scorable_families": {
+      "apply_memory": 302,
+      "forgotten_violation": 301,
+      "needs_approval": 298,
+      "notify_level": 313,
+      "pick_option": 300,
+      "route": 339,
+      "share_ok": 303
+    },
+    "distinct_pseudonymous_users": 654,
+    "halves": {
+      "A": {
+        "renderer": "gpt-6-astra",
+        "id_prefix": "muse/test-a/20261004/",
+        "kb_users": 360,
+        "records": 490,
+        "questions": 1252,
+        "scorable_questions": 1073,
+        "families": {
+          "apply_memory": 145,
+          "forgotten_violation": 152,
+          "needs_approval": 182,
+          "notify_level": 225,
+          "pick_option": 179,
+          "route": 169,
+          "share_ok": 200
+        },
+        "scorable_families": {
+          "apply_memory": 145,
+          "forgotten_violation": 152,
+          "needs_approval": 147,
+          "notify_level": 155,
+          "pick_option": 155,
+          "route": 169,
+          "share_ok": 150
+        },
+        "distinct_pseudonymous_users": 325
+      },
+      "B": {
+        "renderer": "claude-opus-5-5",
+        "id_prefix": "muse/test-b/20261004/",
+        "kb_users": 360,
+        "records": 490,
+        "questions": 1254,
+        "scorable_questions": 1083,
+        "families": {
+          "apply_memory": 157,
+          "forgotten_violation": 149,
+          "needs_approval": 190,
+          "notify_level": 221,
+          "pick_option": 161,
+          "route": 170,
+          "share_ok": 206
+        },
+        "scorable_families": {
+          "apply_memory": 157,
+          "forgotten_violation": 149,
+          "needs_approval": 151,
+          "notify_level": 158,
+          "pick_option": 145,
+          "route": 170,
+          "share_ok": 153
+        },
+        "distinct_pseudonymous_users": 329
+      }
+    }
+  },
+  "generator": {
+    "repo": "muse-decision-model",
+    "commit": "d9406e2",
+    "content_note": "families/compose/balance/render/anchors identical to cf90d13 (DEV/HIDDEN generator); d9406e2 adds partition/leakage/render-export/render-ingest; 4438cfd only rewords the generated INSTRUCTIONS.md",
+    "seed": 20261004,
+    "n_per_half": 490,
+    "questions_per_state": 3,
+    "p_buried": 0.25,
+    "family_weights": "pick_option=3.7,notify_level=1.75,share_ok=1.45,needs_approval=1.55,route=1.6,apply_memory=1.1,forgotten_violation=1.15",
+    "styles": "packages/personal-decisions/styles/public/*.json (9, rotated in seeded blocks)",
+    "half_A_command": "personal-decisions generate --shard shard-a --n 490 --seed 20261004 --renderer astra --concurrency 6 --max-retries 10 (+ weights, styles, p_buried)",
+    "half_B_commands": "personal-decisions render-export --shard shard-b --n 490 --margin 10 --n-batches 8; render-ingest --model claude-opus-5-5 (same draft options)",
+    "half_B_instructions_sha256": "24b6065a303341c52dbdab5cb8cdc9dc8d17e453fbce43747b220fa2ac276605",
+    "half_B_requests_sha256": "dbb3d8c0593b035d3e957a5a74bbbadb265a0f7b7d128ec91d83a343cabdac36",
+    "pre_release_records_sha256": {
+      "A": "ef6a2bee848025506475e7d0483a9433cc9325ee0496fd6ecd19405a697319f4",
+      "B": "ef5be415e3abe58123a481b8851bf86f6c78c11372fcd3bf120e6cd39eb1dc17"
+    },
+    "public_styles_sha256": "ac0780d9cff0a48e0a58faaa10b44826f645fc5bc9064284ecb5a7c986e71f72",
+    "public_styles_note": "SHA-256 of the list of per-file SHA-256 hashes of the 9 public styles; same value as in the HIDDEN commitment"
+  },
+  "anchors": {
+    "A": {
+      "render_requests": 490,
+      "kept": 490,
+      "dropped": 0,
+      "skipped_no_compatible_fragment": 136
+    },
+    "B": {
+      "render_requests": 500,
+      "kept": 500,
+      "dropped": 0,
+      "kept_after_first_490_by_index": 490,
+      "skipped_no_compatible_fragment": 158,
+      "malformed_or_unknown_output_rows": 0
+    },
+    "rule": "same verifier (anchors.check after distractor insertion) for both halves; drops would be logged, never filtered on model correctness"
+  },
+  "population": {
+    "rule": "personal-decisions population, seed 20260930, min_items 8, max_items 30, min_text_share 0.8, require_low_later; the existing 3,000 KB users are exactly ranks 1-1500 per domain, TEST = ranks 1501-1860 per domain (360 product + 360 restaurant)",
+    "users": 720,
+    "population_sha256": "e4bb874339ad9bc62fbdc74196d7c005c13c73863387a102346fc733e538a6ed",
+    "kb_build_code_commit": "cb4c03aead52d64e5e1e7d3ff91da71e11c0f74c",
+    "kb_manifest_sha256": "64db8022d096ed01c495fa7ed19f08fa835216dbeddfdd8214cf61cf95821795",
+    "kb_files": {
+      "airlines.json": null,
+      "airports.jsonl": 6071,
+      "emails.jsonl": 20000,
+      "items.jsonl": 90922,
+      "routes.jsonl": 67662,
+      "users.jsonl": 720
+    },
+    "kb_stats": {
+      "llm_accepted": 5707,
+      "llm_rejected": 376,
+      "population_requested": 720,
+      "skipped_no_liked_choice": 0,
+      "skipped_short_history": 0,
+      "users_seen": 720
+    },
+    "item_catalog_sha256": "44f0ffc00c3cf24610a5cd59791e2122d2eea0d3657769e9a56dd1b7e5682525"
+  },
+  "partition": {
+    "salt": "muse-partition-v1",
+    "per_domain": {
+      "test-a": {
+        "product": 180,
+        "restaurant": 180
+      },
+      "test-b": {
+        "product": 180,
+        "restaurant": 180
+      }
+    },
+    "manifest_sha256": "798e721a2650b5734b274a49729a8552387ba4b485b28e7ac2d3589d5c278b1d",
+    "email_pool": "dev",
+    "email_pool_note": "distractor emails for buried states come from the DEV email pool (1,950 emails; the raw sample has no unused emails); TEST distractor text therefore overlaps DEV's buried distractors by design. Never used in training."
+  },
+  "release": {
+    "command": "personal-decisions export-release --items <TEST KB>/items.jsonl --key-file release/pseudonym_key.txt",
+    "receipts": {
+      "A": {
+        "records_written": 490,
+        "pseudonymous_users": 325,
+        "replacements": {
+          "person_name": 2081,
+          "street_address": 83
+        },
+        "residual_detections": {
+          "person_name": 4
+        },
+        "brand_names_allowed": 904,
+        "out_sha256": "b2fade9778c1bb61472bb9eeb6635c520f0c3b90e3fe5352a66b33c1a56fef26",
+        "records_in_sha256": "ef6a2bee848025506475e7d0483a9433cc9325ee0496fd6ecd19405a697319f4"
+      },
+      "B": {
+        "records_written": 490,
+        "pseudonymous_users": 329,
+        "replacements": {
+          "person_name": 1635,
+          "street_address": 67
+        },
+        "residual_detections": {
+          "person_name": 3
+        },
+        "brand_names_allowed": 904,
+        "out_sha256": "d7907b2a966ba8706203640383a4e7cf641fee73bf935ed3319f0789a1a31d8a",
+        "records_in_sha256": "ef5be415e3abe58123a481b8851bf86f6c78c11372fcd3bf120e6cd39eb1dc17"
+      }
+    },
+    "verified": "ids, state_ids, qids, type/label/soft_label/src, criteria and instructions unchanged; user_id replaced in every record; all anchors re-verified on the release text (A 490/490, B 490/490); deterministic rerun byte-identical; states rewritten A 150, B 129",
+    "export_code_commit": "2267e0c"
+  },
+  "validity": {
+    "test": {
+      "passed": true,
+      "null_baselines": true,
+      "oracle": true
+    },
+    "test-a.release": {
+      "passed": true,
+      "null_baselines": true,
+      "oracle": true
+    },
+    "test-b.release": {
+      "passed": true,
+      "null_baselines": true,
+      "oracle": true
+    }
+  },
+  "validity_note": "decision-eval validity (commit 995c1d8) was run on the TEST file and on each released half",
+  "shortcut_baselines": {
+    "test": {
+      "apply_memory": {
+        "n": 302,
+        "chance": 0.5,
+        "best": "first_option",
+        "best_acc": 0.5,
+        "excess_pts": 0.0
+      },
+      "forgotten_violation": {
+        "n": 301,
+        "chance": 0.5,
+        "best": "majority",
+        "best_acc": 0.5017,
+        "excess_pts": 0.17
+      },
+      "needs_approval": {
+        "n": 298,
+        "chance": 0.5,
+        "best": "first_option",
+        "best_acc": 0.5,
+        "excess_pts": 0.0
+      },
+      "notify_level": {
+        "n": 313,
+        "chance": 0.25,
+        "best": "first_option",
+        "best_acc": 0.2524,
+        "excess_pts": 0.24
+      },
+      "pick_option": {
+        "n": 300,
+        "chance": 0.2757,
+        "best": "priciest",
+        "best_acc": 0.347,
+        "excess_pts": 7.13
+      },
+      "route": {
+        "n": 339,
+        "chance": 0.1667,
+        "best": "majority",
+        "best_acc": 0.1711,
+        "excess_pts": 0.44
+      },
+      "share_ok": {
+        "n": 303,
+        "chance": 0.5,
+        "best": "majority",
+        "best_acc": 0.5017,
+        "excess_pts": 0.17
+      }
+    },
+    "test-a.release": {
+      "apply_memory": {
+        "n": 145,
+        "chance": 0.5,
+        "best": "majority",
+        "best_acc": 0.5034,
+        "excess_pts": 0.34
+      },
+      "forgotten_violation": {
+        "n": 152,
+        "chance": 0.5,
+        "best": "first_option",
+        "best_acc": 0.5,
+        "excess_pts": 0.0
+      },
+      "needs_approval": {
+        "n": 147,
+        "chance": 0.5,
+        "best": "first_option",
+        "best_acc": 0.5034,
+        "excess_pts": 0.34
+      },
+      "notify_level": {
+        "n": 155,
+        "chance": 0.25,
+        "best": "first_option",
+        "best_acc": 0.2516,
+        "excess_pts": 0.16
+      },
+      "pick_option": {
+        "n": 155,
+        "chance": 0.2731,
+        "best": "priciest",
+        "best_acc": 0.3826,
+        "excess_pts": 10.95
+      },
+      "route": {
+        "n": 169,
+        "chance": 0.1667,
+        "best": "majority",
+        "best_acc": 0.1716,
+        "excess_pts": 0.49
+      },
+      "share_ok": {
+        "n": 150,
+        "chance": 0.5,
+        "best": "first_option",
+        "best_acc": 0.5,
+        "excess_pts": 0.0
+      }
+    },
+    "test-b.release": {
+      "apply_memory": {
+        "n": 157,
+        "chance": 0.5,
+        "best": "first_option",
+        "best_acc": 0.5032,
+        "excess_pts": 0.32
+      },
+      "forgotten_violation": {
+        "n": 149,
+        "chance": 0.5,
+        "best": "majority",
+        "best_acc": 0.5034,
+        "excess_pts": 0.34
+      },
+      "needs_approval": {
+        "n": 151,
+        "chance": 0.5,
+        "best": "majority",
+        "best_acc": 0.5033,
+        "excess_pts": 0.33
+      },
+      "notify_level": {
+        "n": 158,
+        "chance": 0.25,
+        "best": "first_option",
+        "best_acc": 0.2532,
+        "excess_pts": 0.32
+      },
+      "pick_option": {
+        "n": 145,
+        "chance": 0.2784,
+        "best": "priciest",
+        "best_acc": 0.3077,
+        "excess_pts": 2.93
+      },
+      "route": {
+        "n": 170,
+        "chance": 0.1667,
+        "best": "first_option",
+        "best_acc": 0.1706,
+        "excess_pts": 0.39
+      },
+      "share_ok": {
+        "n": 153,
+        "chance": 0.5,
+        "best": "majority",
+        "best_acc": 0.5033,
+        "excess_pts": 0.33
+      }
+    }
+  },
+  "shortcut_note": "Amendment 5 reporting: pick_option 'priciest' is +7.1 pts over chance on TEST (n=300; A +10.9, B +2.9; identical before pseudonymization, so structural to option sampling, not rendering); most_popular is below chance. All other families within 0.5 pts. Report next to every pick_option TEST result.",
+  "leakage": {
+    "kb_level": {
+      "test_vs_dev": {
+        "target_events": 0,
+        "target_review_text": 0,
+        "user_target_pairs": 0,
+        "users": 0
+      },
+      "test_vs_hidden": {
+        "target_events": 0,
+        "target_review_text": 0,
+        "user_target_pairs": 0,
+        "users": 0
+      },
+      "test_vs_train": {
+        "target_events": 0,
+        "target_review_text": 0,
+        "user_target_pairs": 0,
+        "users": 0
+      },
+      "test_vs_val": {
+        "target_events": 0,
+        "target_review_text": 0,
+        "user_target_pairs": 0,
+        "users": 0
+      }
+    },
+    "record_level": {
+      "test_records": 980,
+      "test_vs_train": {
+        "files": 4,
+        "identical_states": 0,
+        "identical_pick_option_sets": 4,
+        "identical_questions_incl_criteria": 301
+      },
+      "test_vs_val": {
+        "files": 1,
+        "identical_states": 0,
+        "identical_pick_option_sets": 0,
+        "identical_questions_incl_criteria": 50
+      },
+      "test_vs_dev": {
+        "files": 1,
+        "identical_states": 0,
+        "identical_pick_option_sets": 1,
+        "identical_questions_incl_criteria": 95
+      }
+    },
+    "record_level_breakdown": {
+      "train": {
+        "colliding_question_keys_by_family": {
+          "notify_level": 3,
+          "forgotten_violation": 3,
+          "apply_memory": 25,
+          "needs_approval": 3,
+          "share_ok": 166,
+          "route": 101,
+          "pick_option_set": 4
+        },
+        "of_which_share_a_label": {
+          "notify_level": 3,
+          "forgotten_violation": 3,
+          "apply_memory": 19,
+          "needs_approval": 3,
+          "share_ok": 110,
+          "pick_option_set": 4,
+          "route": 30
+        }
+      },
+      "val": {
+        "colliding_question_keys_by_family": {
+          "notify_level": 3,
+          "forgotten_violation": 3,
+          "needs_approval": 3,
+          "share_ok": 28,
+          "route": 8,
+          "apply_memory": 5
+        },
+        "of_which_share_a_label": {
+          "notify_level": 3,
+          "forgotten_violation": 3,
+          "needs_approval": 3,
+          "share_ok": 15,
+          "apply_memory": 3
+        }
+      },
+      "dev": {
+        "colliding_question_keys_by_family": {
+          "notify_level": 3,
+          "forgotten_violation": 3,
+          "needs_approval": 3,
+          "share_ok": 52,
+          "route": 29,
+          "apply_memory": 5,
+          "pick_option_set": 1
+        },
+        "of_which_share_a_label": {
+          "notify_level": 3,
+          "forgotten_violation": 3,
+          "needs_approval": 3,
+          "share_ok": 35,
+          "route": 10,
+          "apply_memory": 3,
+          "pick_option_set": 1
+        }
+      }
+    },
+    "note": "HIDDEN audited only at KB level via `personal-decisions leakage` (in-process, counts only); HIDDEN records never read. Record-level identical questions are templated question texts (labels depend on the state; no identical states); 4 pick_option option sets (+same label) also occur in TRAIN and 1 in DEV for different (disjoint) users."
+  },
+  "astra_tokens": {
+    "kb_extraction": {
+      "requests": 829,
+      "input": 522572,
+      "output": 238030
+    },
+    "half_A_render": {
+      "requests": 490,
+      "input": 539593,
+      "output": 333894
+    }
+  },
+  "renderer_process_notes": [
+    "Half B (Claude Opus 5.5): some states were revised by their renderer to fix anchors or remove details not in the input, and two states had item order restored; every kept state passed the same anchor check.",
+    "Half A (gpt-6-astra) had a single attempt per state with no feedback; all 490 passed the anchor check."
+  ]
+}

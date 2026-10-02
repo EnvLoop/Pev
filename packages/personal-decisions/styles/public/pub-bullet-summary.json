@@ -1,0 +1,8 @@
+{
+  "style_id": "pub-bullet-summary",
+  "voice": "a neutral briefing prepared for the assistant before it acts",
+  "format": "markdown with '##' headings per topic and '-' bullets; a final '## Pending' section holds the pending item and its options as a bulleted list",
+  "language_mix": "English only",
+  "verbosity": "concise; one fact per bullet",
+  "notes": "Dates written as 'March 5, 2024'. Keep 'Current time' as the first line."
+}

@@ -1,0 +1,25 @@
+# Pipeline working tree (raw data, knowledge base, shards, sealed sets, receipts) and local downloads
+/work/
+/adapter/
+/data/
+/eval/
+/rows/
+/runs/
+
+# Secrets
+.env
+
+# Python
+.venv*/
+__pycache__/
+*.pyc
+*.egg-info/
+/build/
+/dist/
+
+# Editors and OS
+.DS_Store
+.idea/
+.vscode/
+.claude/
+node_modules/

@@ -1,0 +1,8 @@
+{
+  "style_id": "pub-email-thread",
+  "voice": "a forwarded email thread the assistant has access to, with the assistant's own short summary note on top",
+  "format": "email headers (From/To/Date/Subject) and quoted replies with '>' markers; profile, rules and preferences appear inside the emails or in the assistant's note; the pending item is in the most recent email",
+  "language_mix": "English only",
+  "verbosity": "verbose; polite email prose with greetings and sign-offs",
+  "notes": "Dates in email headers use RFC-2822 style like 'Tue, 5 Mar 2024 09:12'. Keep dated updates with their dates."
+}

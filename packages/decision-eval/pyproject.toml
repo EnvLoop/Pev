@@ -1,0 +1,58 @@
+[project]
+name = "decision-eval"
+version = "0.1.0"
+description = "Paired B0 (zero-shot Qwen) vs C (Qwen + SFT LoRA) evaluation of MUSE-style decision records"
+requires-python = ">=3.12,<3.13"
+dependencies = [
+  "numpy==2.5.3",
+  "openai==3.22.1",
+  "peft==0.21.1",
+  "python-dotenv==1.2.3",
+  "torch==2.14.0",
+  "transformers==5.17.0",
+]
+
+[project.optional-dependencies]
+# CUDA hosts: transformers binds these Triton kernels to the Gated DeltaNet layers of Qwen3.5/3.8 (otherwise it runs
+# its much slower PyTorch reference). Same pins as the environment the released adapter was trained in.
+fast = [
+  "flash-linear-attention==0.5.2; sys_platform == 'linux'",
+  "fla-core==0.5.2; sys_platform == 'linux'",
+  "einops==0.8.2; sys_platform == 'linux'",
+]
+# predict-jev only: TypeSafe's hosted Jev, a DEV-only reference (never a gate input, never on HIDDEN).
+jev = ["typesafe-sdk==0.7.2"]
+# predict-kev only: the Kev DEV reference (docs/PREREGISTRATION.md amendment 2), at the pre-registered commit.
+kev = [
+  "kev @ git+https://github.com/jaredpalmer/kev@0fe8fc97c2bcc247fa3efb6e5c32af4e99770e91",
+]
+
+[project.scripts]
+predict-base = "decision_eval.cli.predict:predict_base_main"
+predict-kev = "decision_eval.cli.predict:predict_kev_main"
+predict-kev-ref = "decision_eval.cli.predict:predict_kev_ref_main"
+predict-openai = "decision_eval.cli.reference:predict_openai_main"
+predict-jev = "decision_eval.cli.reference:predict_jev_main"
+to-sft = "decision_eval.cli.sft:to_sft_main"
+select-template = "decision_eval.cli.fit:select_template_main"
+calibrate = "decision_eval.cli.fit:calibrate_main"
+thresholds = "decision_eval.cli.fit:thresholds_main"
+score = "decision_eval.cli.score:score_main"
+score-reference = "decision_eval.cli.score:score_reference_main"
+noise-floor = "decision_eval.cli.diagnose:noise_floor_main"
+validity = "decision_eval.cli.diagnose:validity_main"
+export-hillclimb = "decision_eval.cli.diagnose:export_hillclimb_main"
+compare-release = "decision_eval.cli.release:compare_release_main"
+
+[build-system]
+requires = ["uv_build>=0.12.20,<0.13"]
+build-backend = "uv_build"
+
+[tool.uv]
+# kev@0fe8fc97 declares torch<2.9. One environment serves B0, C and the Kev reference, so the extra runs on the same
+# torch as everything else; tests/test_model_paths.py runs kev's loader and forward on it (see docs/VERSIONS.md).
+override-dependencies = ["torch==2.14.0"]
+
+[tool.uv.build-backend]
+module-root = ""
+module-name = "decision_eval"

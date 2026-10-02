@@ -1,0 +1,1904 @@
+{
+ "dev": {
+  "anchors": {
+   "anchor_drop_rate": 0.0,
+   "drop_rate_by_family": {
+    "apply_memory": 0.0,
+    "forgotten_violation": 0.0,
+    "needs_approval": 0.0,
+    "notify_level": 0.0,
+    "pick_option": 0.0,
+    "route": 0.0,
+    "share_ok": 0.0
+   },
+   "dropped": 0,
+   "render_requests": 630,
+   "skipped_no_compatible_fragment": 171
+  },
+  "balance": {
+   "answer_position": {
+    "pick_option": {
+     "counts": {
+      "3opt/pos0": 32,
+      "3opt/pos1": 32,
+      "3opt/pos2": 32,
+      "4opt/pos0": 14,
+      "4opt/pos1": 14,
+      "4opt/pos2": 14,
+      "4opt/pos3": 14,
+      "5opt/pos0": 9,
+      "5opt/pos1": 9,
+      "5opt/pos2": 9,
+      "5opt/pos3": 9,
+      "5opt/pos4": 9
+     },
+     "max_minus_min": 23
+    },
+    "route": {
+     "counts": {
+      "6opt/pos0": 33,
+      "6opt/pos1": 32,
+      "6opt/pos2": 33,
+      "6opt/pos3": 33,
+      "6opt/pos4": 33,
+      "6opt/pos5": 33
+     },
+     "max_minus_min": 1
+    }
+   },
+   "hard_labels": {
+    "apply_memory": {
+     "counts": {
+      "false": 106,
+      "true": 107
+     },
+     "max_minus_min": 1
+    },
+    "forgotten_violation": {
+     "counts": {
+      "false": 103,
+      "true": 102
+     },
+     "max_minus_min": 1
+    },
+    "needs_approval": {
+     "counts": {
+      "false": 97,
+      "true": 97
+     },
+     "max_minus_min": 0
+    },
+    "notify_level": {
+     "counts": {
+      "0": 48,
+      "1": 49,
+      "2": 49,
+      "3": 48
+     },
+     "max_minus_min": 1
+    },
+    "share_ok": {
+     "counts": {
+      "false": 104,
+      "true": 105
+     },
+     "max_minus_min": 1
+    }
+   },
+   "route_distinct_labels": 6,
+   "route_label_majority_share": 0.1675
+  },
+  "counts": {
+   "ambiguous_tied_per_family": {
+    "needs_approval": 49,
+    "notify_level": 88,
+    "pick_option": 16,
+    "share_ok": 64
+   },
+   "buried_state_share": 0.2492,
+   "per_family": {
+    "apply_memory": 213,
+    "forgotten_violation": 205,
+    "needs_approval": 243,
+    "notify_level": 282,
+    "pick_option": 213,
+    "route": 197,
+    "share_ok": 273
+   },
+   "questions": 1626,
+   "records": 630,
+   "scorable_per_family": {
+    "apply_memory": 213,
+    "forgotten_violation": 205,
+    "needs_approval": 194,
+    "notify_level": 194,
+    "pick_option": 197,
+    "route": 197,
+    "share_ok": 209
+   },
+   "scorable_total": 1409,
+   "soft_unique_argmax": {},
+   "variants": {
+    "apply_memory": {
+     "buried+clean": 58,
+     "clean": 155
+    },
+    "forgotten_violation": {
+     "buried+clean": 41,
+     "buried+removed": 5,
+     "clean": 136,
+     "removed": 23
+    },
+    "needs_approval": {
+     "buried+clean": 41,
+     "buried+override": 1,
+     "buried+removed": 15,
+     "clean": 139,
+     "override": 13,
+     "removed": 34
+    },
+    "notify_level": {
+     "buried+clean": 48,
+     "buried+override": 2,
+     "buried+removed": 17,
+     "clean": 134,
+     "override": 10,
+     "removed": 71
+    },
+    "pick_option": {
+     "buried+clean": 42,
+     "buried+override": 8,
+     "buried+removed": 3,
+     "clean": 130,
+     "override": 17,
+     "removed": 13
+    },
+    "route": {
+     "buried+clean": 38,
+     "buried+override": 19,
+     "clean": 98,
+     "override": 42
+    },
+    "share_ok": {
+     "buried+clean": 34,
+     "buried+override": 18,
+     "buried+removed": 20,
+     "clean": 100,
+     "override": 57,
+     "removed": 44
+    }
+   }
+  },
+  "generator": {
+   "command": "personal-decisions generate --shard work/muse/eval-dev/kb --n 630 --seed 20261001 --style-file styles/public/*.json (9) --renderer astra --family-weights pick_option=3.2,notify_level=1.7,share_ok=1.5,needs_approval=1.5,route=1.35,apply_memory=1.2 --p-buried 0.25 --max-retries 10 (concurrency 12, then 4 after resume)",
+   "content_commit": "cf90d13724298a28726cf58b3e58c4813fea9ceb",
+   "error_counter_wrapper_sha256": "e5b606b7651916b53f6057e822ddaee165a88dcce73013fbd8b3cf2c7cfcfb4c",
+   "note": "run started 14:07 on cf90d13 (includes f85713b sliding window); bd99a3a (llm.py retry logging only) landed after start and does not change records"
+  },
+  "noise_floor_oracle_free": {
+   "chance_predictor": {
+    "family_half_width": {
+     "apply_memory": 0.0657,
+     "forgotten_violation": 0.0696,
+     "needs_approval": 0.0679,
+     "notify_level": 0.0625,
+     "pick_option": 0.0618,
+     "route": 0.0516,
+     "share_ok": 0.0693
+    },
+    "macro_half_width": 0.0241,
+    "min_detectable_gain": 0.0341
+   },
+   "clusters": 625,
+   "n_scored": 1409,
+   "note": "p50 = right with prob 0.5 per question (max binary variance); paired widths assume independent errors (upper estimate)",
+   "p50_predictor": {
+    "family_half_width": {
+     "apply_memory": 0.0658,
+     "forgotten_violation": 0.0689,
+     "needs_approval": 0.0705,
+     "notify_level": 0.0719,
+     "pick_option": 0.0692,
+     "route": 0.0694,
+     "share_ok": 0.0645
+    },
+    "family_paired_independent": {
+     "apply_memory": 0.0931,
+     "forgotten_violation": 0.0974,
+     "needs_approval": 0.0996,
+     "notify_level": 0.1017,
+     "pick_option": 0.0978,
+     "route": 0.0982,
+     "share_ok": 0.0912
+    },
+    "macro_half_width": 0.0256,
+    "min_detectable_gain": 0.0362
+   }
+  },
+  "renderer_model": "gpt-6-astra",
+  "seed": 20261001,
+  "sha256": {
+   "dev": "6f344562037ad78fd3b572de87c47d022f8df62c6ded8c30fc953660c313f48c",
+   "dev_kb_manifest": "85b84d1ac6e5228b6bde7b9f027a6a0ab3cf3911bdd7ec05e7c7fc2e7d80fc6d",
+   "eval_set_manifest": "f706b810d3277b2e058179497a07477119f68c6691b769fc37c6d97053cb3f70",
+   "guard": "cd7d129a84232e0c7a4e92b4840a6dfe14c8bb93c5d1904b526fa8c085325d2d",
+   "guard_source_kev_0fe8fc97": "cd7d129a84232e0c7a4e92b4840a6dfe14c8bb93c5d1904b526fa8c085325d2d",
+   "preregistration": "87592242ba784459e4624e73f91215889a0a4251ca85190e30ebf2c8c8f67628"
+  },
+  "shortcut_baselines": {
+   "per_family": {
+    "apply_memory": {
+     "best": "majority",
+     "best_acc": 0.5023,
+     "chance": 0.5,
+     "excess_pts": 0.23,
+     "majority": 0.5023,
+     "n_hard": 213
+    },
+    "forgotten_violation": {
+     "best": "first_option",
+     "best_acc": 0.5024,
+     "chance": 0.5,
+     "excess_pts": 0.24,
+     "majority": 0.5024,
+     "n_hard": 205
+    },
+    "needs_approval": {
+     "best": "first_option",
+     "best_acc": 0.5,
+     "chance": 0.5,
+     "excess_pts": 0.0,
+     "majority": 0.5,
+     "n_hard": 194
+    },
+    "notify_level": {
+     "best": "majority",
+     "best_acc": 0.2526,
+     "chance": 0.25,
+     "excess_pts": 0.26,
+     "majority": 0.2526,
+     "n_hard": 194
+    },
+    "pick_option": {
+     "best": "centroid",
+     "best_acc": 0.3046,
+     "chance": 0.2792,
+     "excess_pts": 2.54,
+     "majority": 0.0152,
+     "n_hard": 197
+    },
+    "route": {
+     "best": "first_option",
+     "best_acc": 0.1675,
+     "chance": 0.1667,
+     "excess_pts": 0.08,
+     "majority": 0.1675,
+     "n_hard": 197
+    },
+    "share_ok": {
+     "best": "majority",
+     "best_acc": 0.5024,
+     "chance": 0.5,
+     "excess_pts": 0.24,
+     "majority": 0.5024,
+     "n_hard": 209
+    }
+   },
+   "report_sha256": "c0fc58fbacdfde5044f562f59918bb3831b1529efa972047c47542586feb2f4d"
+  },
+  "styles_public": {
+   "manifest": "work/muse/styles_public.sha256",
+   "manifest_sha256": "ac0780d9cff0a48e0a58faaa10b44826f645fc5bc9064284ecb5a7c986e71f72",
+   "per_style_states": {
+    "pub-bullet-summary": 74,
+    "pub-chatlog-en": 69,
+    "pub-email-thread": 72,
+    "pub-kv-log": 71,
+    "pub-memory-notes": 69,
+    "pub-mixed-sources": 68,
+    "pub-verbose-journal": 72,
+    "pub-zh-en-mixed-chat": 67,
+    "pub-zh-notes": 68
+   },
+   "verified": 9
+  },
+  "tokens": {
+   "api_errors_concurrency4_phase": {
+    "RateLimitError/429": 50,
+    "requests": 634
+   },
+   "guard_prompt_tokens_per_template": {
+    "assistant": {
+     "max": 1114,
+     "p50": 193,
+     "p95": 1028,
+     "questions": 1440,
+     "total": 386119
+    },
+    "direct": {
+     "max": 1063,
+     "p50": 142,
+     "p95": 977,
+     "questions": 1440,
+     "total": 312678
+    },
+    "evidence": {
+     "max": 1102,
+     "p50": 181,
+     "p95": 1016,
+     "questions": 1440,
+     "total": 369343
+    }
+   },
+   "prompt_tokens_per_template": {
+    "assistant": {
+     "max": 8196,
+     "p50": 1005,
+     "p95": 6235,
+     "questions": 1626,
+     "total": 3081476
+    },
+    "direct": {
+     "max": 8145,
+     "p50": 954,
+     "p95": 6184,
+     "questions": 1626,
+     "total": 2998550
+    },
+    "evidence": {
+     "max": 8184,
+     "p50": 995,
+     "p95": 6225,
+     "questions": 1626,
+     "total": 3063619
+    }
+   },
+   "render_tokens_all_runs_total": 2290787,
+   "render_tokens_final": {
+    "input_tokens": 694297,
+    "output_tokens": 426419
+   },
+   "render_tokens_superseded": {
+    "30b59c6_run_superseded": 953882,
+    "b7f370f_wrapper_run_discarded": 216189
+   },
+   "state_tokens_qwen": {
+    "all": {
+     "max": 8014,
+     "n": 630,
+     "p50": 835,
+     "p95": 6086
+    },
+    "buried": {
+     "max": 8014,
+     "n": 157,
+     "p50": 4573,
+     "p95": 7221
+    },
+    "not_buried": {
+     "max": 1601,
+     "n": 473,
+     "p50": 725,
+     "p95": 1217
+    }
+   }
+  }
+ },
+ "general_mix": {
+  "families": {
+   "agnews": {
+    "available": 300,
+    "selected": 120
+   },
+   "agnews_yn": {
+    "available": 600,
+    "selected": 121
+   },
+   "amazon": {
+    "available": 300,
+    "selected": 120
+   },
+   "banking77": {
+    "available": 300,
+    "selected": 120
+   },
+   "boolq": {
+    "available": 300,
+    "selected": 121
+   },
+   "contrastive_age_eligibility": {
+    "available": 117,
+    "selected": 117
+   },
+   "contrastive_quantity_limit": {
+    "available": 103,
+    "selected": 103
+   },
+   "contrastive_return_window": {
+    "available": 72,
+    "selected": 72
+   },
+   "contrastive_spend_threshold": {
+    "available": 119,
+    "selected": 119
+   },
+   "dbpedia14": {
+    "available": 300,
+    "selected": 121
+   },
+   "imdb": {
+    "available": 300,
+    "selected": 121
+   },
+   "mnli": {
+    "available": 300,
+    "selected": 121
+   },
+   "sst5": {
+    "available": 300,
+    "selected": 121
+   },
+   "trec": {
+    "available": 300,
+    "selected": 121
+   },
+   "yelp": {
+    "available": 300,
+    "selected": 121
+   },
+   "yelp_yn": {
+    "available": 300,
+    "selected": 121
+   }
+  },
+  "general_mix": {
+   "path": "work/muse/data/general-mix.jsonl",
+   "questions": 1860,
+   "records": 1747,
+   "sha256": "5378365cbc021e9c2b825e9ce5f871082a9c5c1ed936479aef67ba830187750c"
+  },
+  "general_share_target": 0.3,
+  "leakage_audit": {
+   "general_mix_matches": {
+    "dev": {
+     "exact": 0,
+     "ngram": 0,
+     "normalized": 0
+    },
+    "guard": {
+     "exact": 0,
+     "ngram": 0,
+     "normalized": 0
+    },
+    "val": {
+     "exact": 0,
+     "ngram": 0,
+     "normalized": 0
+    }
+   },
+   "method": "exact state, normalized text, word 8-gram overlap >= 0.8 either side",
+   "source_matches": {
+    "dev": {
+     "exact": 0,
+     "ngram": 0,
+     "normalized": 0
+    },
+    "guard": {
+     "exact": 0,
+     "ngram": 21,
+     "normalized": 0
+    },
+    "val": {
+     "exact": 0,
+     "ngram": 0,
+     "normalized": 0
+    }
+   },
+   "source_records_dropped": 21,
+   "targets_sha256": {
+    "dev": "6f344562037ad78fd3b572de87c47d022f8df62c6ded8c30fc953660c313f48c",
+    "guard": "cd7d129a84232e0c7a4e92b4840a6dfe14c8bb93c5d1904b526fa8c085325d2d",
+    "val": "dd5334a4e9cef8051b3ca994b85c4142d16dd7e4a0d15272b92206ed4c792fc2"
+   }
+  },
+  "mix": {
+   "general_row_share": 0.2999516207063377,
+   "path": "work/muse/data/train.r2-mix.jsonl",
+   "records": 3717,
+   "sft": {
+    "ambiguous_excluded": 660,
+    "max_prompt_tokens": 8649,
+    "path": "work/muse/data/train.r2-mix.sft.direct.jsonl",
+    "rows": 6201,
+    "sha256": "046a2ddb1c3e9a24cd3776eaa7d17eb0c9e7d54e21afc477e024f7854067cf34",
+    "template_sha256": "681675e88618155374b1e4ca51149bf0f582728a35361b1c3015651067219551"
+   },
+   "sha256": "25972129e9c6c3a0a841f23fdf1526c37147d877f4447a83a01096fffc880005"
+  },
+  "seed": 20261004,
+  "source": {
+   "commit": "0fe8fc97c2bcc247fa3efb6e5c32af4e99770e91",
+   "file": "evals/decision-v2/train.jsonl",
+   "note": "train split of the suite whose test split is the decision-v7 guard",
+   "records": 3432,
+   "repo": "jaredpalmer/kev",
+   "sha256": "06aa8aa3b50a093fd24eb6899ef83159da94c669f1d6b0b90d9b1a1c083451d9"
+  },
+  "train": {
+   "path": "work/muse/data/train.v2-5k.jsonl",
+   "records": 1970,
+   "sft_rows": 4341,
+   "sha256": "a75d1ebe792e9ad2dcf5aac2d9aee7039a048ccab8d91be75f6882029f0f964a"
+  }
+ },
+ "hidden_commitment": {
+  "bytes": 8800805,
+  "count": 960,
+  "created_at": "2026-09-30T09:36:50+00:00",
+  "families": {
+   "apply_memory": 303,
+   "forgotten_violation": 293,
+   "needs_approval": 388,
+   "notify_level": 395,
+   "pick_option": 335,
+   "route": 322,
+   "share_ok": 420
+  },
+  "generator": {
+   "command": "personal-decisions generate",
+   "commit": "cf90d13724298a28726cf58b3e58c4813fea9ceb",
+   "family_weights": {
+    "needs_approval": 1.4,
+    "notify_level": 1.5,
+    "pick_option": 3.5,
+    "route": 1.35,
+    "share_ok": 1.35
+   },
+   "n_requested": 960,
+   "p_buried": 0.25,
+   "questions_per_state": 3,
+   "renderer_model": "gpt-6-astra",
+   "repo": "muse-decision-model",
+   "seed": 20261002
+  },
+  "prompt_tokens": {
+   "assistant": 5066764,
+   "direct": 4941508,
+   "evidence": 5039797
+  },
+  "public_styles_sha256": "ac0780d9cff0a48e0a58faaa10b44826f645fc5bc9064284ecb5a7c986e71f72",
+  "questions": 2456,
+  "schema": "muse-hidden-commitment-v1",
+  "scorable_families": {
+   "apply_memory": 303,
+   "forgotten_violation": 293,
+   "needs_approval": 308,
+   "notify_level": 275,
+   "pick_option": 299,
+   "route": 322,
+   "share_ok": 306
+  },
+  "scorable_questions": 2106,
+  "sha256": "7d65eb87421a1a900d151ea31a6d80d453d3dca431a19222a85b3752e773b19b",
+  "shard_users_sha256": "b45dcd5218835115100f9a3b5bb1df90b0aae0affda71bd14f482d864125c1c8",
+  "style_halves": {
+   "private": {
+    "questions": 1144,
+    "records": 446,
+    "scorable_questions": 978
+   },
+   "public": {
+    "questions": 1312,
+    "records": 514,
+    "scorable_questions": 1128
+   }
+  },
+  "style_ids_per_half": {
+   "private": 6,
+   "public": 6
+  },
+  "tokenizer": {
+   "model": "Qwen/Qwen3.8-27B",
+   "revision": "1d4bf0f2ff6012fd82039f2fa52739d0dd7c60c0"
+  }
+ },
+ "kb_extractor": {
+  "facts_llm": 23324,
+  "facts_rule": 2424,
+  "facts_total": 25748,
+  "mode": "llm (gpt-6-astra, one request per <=12 early reviews of a user, concurrency 8) with per-review rule fallback",
+  "share_llm_of_all_facts": 0.9059,
+  "total_input_tokens": 2135695,
+  "total_output_tokens": 961369,
+  "total_requests": 3426
+ },
+ "population": {
+  "domains": {
+   "product": {
+    "chosen": 1500,
+    "eligible": 2992,
+    "requested": 1500,
+    "users_seen": 8000
+   },
+   "restaurant": {
+    "chosen": 1500,
+    "eligible": 5514,
+    "requested": 1500,
+    "users_seen": 38263
+   }
+  },
+  "rule": {
+   "max_items": 30,
+   "memory_fraction": 0.6,
+   "min_items": 8,
+   "min_text_share": 0.8,
+   "per_domain": {
+    "product": 1500,
+    "restaurant": 1500
+   },
+   "require_low_later": true,
+   "salt": "muse-population",
+   "seed": 20260930
+  },
+  "users": 3000
+ },
+ "raw_stats": {
+  "airlines": 6162,
+  "airports": 7698,
+  "emails": 20000,
+  "interactions": 881370,
+  "items": 90922,
+  "routes": 67663
+ },
+ "split_leakage": {
+  "dev_vs_train": {
+   "target_events": 0,
+   "target_review_text": 0,
+   "user_target_pairs": 0,
+   "users": 0
+  },
+  "dev_vs_val": {
+   "target_events": 0,
+   "target_review_text": 0,
+   "user_target_pairs": 0,
+   "users": 0
+  },
+  "hidden_vs_dev": {
+   "target_events": 0,
+   "target_review_text": 0,
+   "user_target_pairs": 0,
+   "users": 0
+  },
+  "hidden_vs_train": {
+   "target_events": 0,
+   "target_review_text": 0,
+   "user_target_pairs": 0,
+   "users": 0
+  },
+  "hidden_vs_val": {
+   "target_events": 0,
+   "target_review_text": 0,
+   "user_target_pairs": 0,
+   "users": 0
+  },
+  "val_vs_train": {
+   "target_events": 0,
+   "target_review_text": 2,
+   "user_target_pairs": 0,
+   "users": 0
+  }
+ },
+ "split_users": {
+  "dev": 480,
+  "hidden": 720,
+  "train": 1500,
+  "val": 300
+ },
+ "test_commitment": {
+  "anchors": {
+   "A": {
+    "dropped": 0,
+    "kept": 490,
+    "render_requests": 490,
+    "skipped_no_compatible_fragment": 136
+   },
+   "B": {
+    "dropped": 0,
+    "kept": 500,
+    "kept_after_first_490_by_index": 490,
+    "malformed_or_unknown_output_rows": 0,
+    "render_requests": 500,
+    "skipped_no_compatible_fragment": 158
+   },
+   "rule": "same verifier (anchors.check after distractor insertion) for both halves; drops would be logged, never filtered on model correctness"
+  },
+  "astra_tokens": {
+   "half_A_render": {
+    "input": 539593,
+    "output": 333894,
+    "requests": 490
+   },
+   "kb_extraction": {
+    "input": 522572,
+    "output": 238030,
+    "requests": 829
+   }
+  },
+  "created_at": "2026-10-01T15:11:22+00:00",
+  "generator": {
+   "commit": "d9406e2",
+   "content_note": "families/compose/balance/render/anchors identical to cf90d13 (DEV/HIDDEN generator); d9406e2 adds partition/leakage/render-export/render-ingest; 4438cfd only rewords the generated INSTRUCTIONS.md",
+   "family_weights": "pick_option=3.7,notify_level=1.75,share_ok=1.45,needs_approval=1.55,route=1.6,apply_memory=1.1,forgotten_violation=1.15",
+   "half_A_command": "personal-decisions generate --shard shard-a --n 490 --seed 20261004 --renderer astra --concurrency 6 --max-retries 10 (+ weights, styles, p_buried)",
+   "half_B_commands": "personal-decisions render-export --shard shard-b --n 490 --margin 10 --n-batches 8; render-ingest --model claude-opus-5-5 (same draft options)",
+   "half_B_instructions_sha256": "24b6065a303341c52dbdab5cb8cdc9dc8d17e453fbce43747b220fa2ac276605",
+   "half_B_requests_sha256": "dbb3d8c0593b035d3e957a5a74bbbadb265a0f7b7d128ec91d83a343cabdac36",
+   "n_per_half": 490,
+   "p_buried": 0.25,
+   "pre_release_records_sha256": {
+    "A": "ef6a2bee848025506475e7d0483a9433cc9325ee0496fd6ecd19405a697319f4",
+    "B": "ef5be415e3abe58123a481b8851bf86f6c78c11372fcd3bf120e6cd39eb1dc17"
+   },
+   "public_styles_note": "SHA-256 of the list of per-file SHA-256 hashes of the 9 public styles; same value as in the HIDDEN commitment",
+   "public_styles_sha256": "ac0780d9cff0a48e0a58faaa10b44826f645fc5bc9064284ecb5a7c986e71f72",
+   "questions_per_state": 3,
+   "repo": "muse-decision-model",
+   "seed": 20261004,
+   "styles": "packages/personal-decisions/styles/public/*.json (9, rotated in seeded blocks)"
+  },
+  "leakage": {
+   "kb_level": {
+    "test_vs_dev": {
+     "target_events": 0,
+     "target_review_text": 0,
+     "user_target_pairs": 0,
+     "users": 0
+    },
+    "test_vs_hidden": {
+     "target_events": 0,
+     "target_review_text": 0,
+     "user_target_pairs": 0,
+     "users": 0
+    },
+    "test_vs_train": {
+     "target_events": 0,
+     "target_review_text": 0,
+     "user_target_pairs": 0,
+     "users": 0
+    },
+    "test_vs_val": {
+     "target_events": 0,
+     "target_review_text": 0,
+     "user_target_pairs": 0,
+     "users": 0
+    }
+   },
+   "note": "HIDDEN audited only at KB level via `personal-decisions leakage` (in-process, counts only); HIDDEN records never read. Record-level identical questions are templated question texts (labels depend on the state; no identical states); 4 pick_option option sets (+same label) also occur in TRAIN and 1 in DEV for different (disjoint) users.",
+   "record_level": {
+    "test_records": 980,
+    "test_vs_dev": {
+     "files": 1,
+     "identical_pick_option_sets": 1,
+     "identical_questions_incl_criteria": 95,
+     "identical_states": 0
+    },
+    "test_vs_train": {
+     "files": 4,
+     "identical_pick_option_sets": 4,
+     "identical_questions_incl_criteria": 301,
+     "identical_states": 0
+    },
+    "test_vs_val": {
+     "files": 1,
+     "identical_pick_option_sets": 0,
+     "identical_questions_incl_criteria": 50,
+     "identical_states": 0
+    }
+   },
+   "record_level_breakdown": {
+    "dev": {
+     "colliding_question_keys_by_family": {
+      "apply_memory": 5,
+      "forgotten_violation": 3,
+      "needs_approval": 3,
+      "notify_level": 3,
+      "pick_option_set": 1,
+      "route": 29,
+      "share_ok": 52
+     },
+     "of_which_share_a_label": {
+      "apply_memory": 3,
+      "forgotten_violation": 3,
+      "needs_approval": 3,
+      "notify_level": 3,
+      "pick_option_set": 1,
+      "route": 10,
+      "share_ok": 35
+     }
+    },
+    "train": {
+     "colliding_question_keys_by_family": {
+      "apply_memory": 25,
+      "forgotten_violation": 3,
+      "needs_approval": 3,
+      "notify_level": 3,
+      "pick_option_set": 4,
+      "route": 101,
+      "share_ok": 166
+     },
+     "of_which_share_a_label": {
+      "apply_memory": 19,
+      "forgotten_violation": 3,
+      "needs_approval": 3,
+      "notify_level": 3,
+      "pick_option_set": 4,
+      "route": 30,
+      "share_ok": 110
+     }
+    },
+    "val": {
+     "colliding_question_keys_by_family": {
+      "apply_memory": 5,
+      "forgotten_violation": 3,
+      "needs_approval": 3,
+      "notify_level": 3,
+      "route": 8,
+      "share_ok": 28
+     },
+     "of_which_share_a_label": {
+      "apply_memory": 3,
+      "forgotten_violation": 3,
+      "needs_approval": 3,
+      "notify_level": 3,
+      "share_ok": 15
+     }
+    }
+   }
+  },
+  "partition": {
+   "email_pool": "dev",
+   "email_pool_note": "distractor emails for buried states come from the DEV email pool (1,950 emails; the raw sample has no unused emails); TEST distractor text therefore overlaps DEV's buried distractors by design. Never used in training.",
+   "manifest_sha256": "798e721a2650b5734b274a49729a8552387ba4b485b28e7ac2d3589d5c278b1d",
+   "per_domain": {
+    "test-a": {
+     "product": 180,
+     "restaurant": 180
+    },
+    "test-b": {
+     "product": 180,
+     "restaurant": 180
+    }
+   },
+   "salt": "muse-partition-v1"
+  },
+  "population": {
+   "item_catalog_sha256": "44f0ffc00c3cf24610a5cd59791e2122d2eea0d3657769e9a56dd1b7e5682525",
+   "kb_build_code_commit": "cb4c03aead52d64e5e1e7d3ff91da71e11c0f74c",
+   "kb_files": {
+    "airlines.json": null,
+    "airports.jsonl": 6071,
+    "emails.jsonl": 20000,
+    "items.jsonl": 90922,
+    "routes.jsonl": 67662,
+    "users.jsonl": 720
+   },
+   "kb_manifest_sha256": "64db8022d096ed01c495fa7ed19f08fa835216dbeddfdd8214cf61cf95821795",
+   "kb_stats": {
+    "llm_accepted": 5707,
+    "llm_rejected": 376,
+    "population_requested": 720,
+    "skipped_no_liked_choice": 0,
+    "skipped_short_history": 0,
+    "users_seen": 720
+   },
+   "population_sha256": "e4bb874339ad9bc62fbdc74196d7c005c13c73863387a102346fc733e538a6ed",
+   "rule": "personal-decisions population, seed 20260930, min_items 8, max_items 30, min_text_share 0.8, require_low_later; the existing 3,000 KB users are exactly ranks 1-1500 per domain, TEST = ranks 1501-1860 per domain (360 product + 360 restaurant)",
+   "users": 720
+  },
+  "preregistration": {
+   "amendment": 6,
+   "commit": "cb4c03a",
+   "sha256": "d42ddda19aaa49d9a294e96539a407bfa6cec795904ad67e73b9a36683ed5d87"
+  },
+  "public_copy_note": "This public copy omits internal infrastructure details; the data-file hashes are unchanged. The original commitment (SHA-256 0b125c593d24a9502fa5bf3e25712c3ebf92d705e1a8bb57780c8b73561b0fbb, cited by amendment 7 and docs/TEST_RESULTS.json) was written before any model ran on TEST.",
+  "release": {
+   "command": "personal-decisions export-release --items <TEST KB>/items.jsonl --key-file release/pseudonym_key.txt",
+   "export_code_commit": "2267e0c",
+   "receipts": {
+    "A": {
+     "brand_names_allowed": 904,
+     "out_sha256": "b2fade9778c1bb61472bb9eeb6635c520f0c3b90e3fe5352a66b33c1a56fef26",
+     "pseudonymous_users": 325,
+     "records_in_sha256": "ef6a2bee848025506475e7d0483a9433cc9325ee0496fd6ecd19405a697319f4",
+     "records_written": 490,
+     "replacements": {
+      "person_name": 2081,
+      "street_address": 83
+     },
+     "residual_detections": {
+      "person_name": 4
+     }
+    },
+    "B": {
+     "brand_names_allowed": 904,
+     "out_sha256": "d7907b2a966ba8706203640383a4e7cf641fee73bf935ed3319f0789a1a31d8a",
+     "pseudonymous_users": 329,
+     "records_in_sha256": "ef5be415e3abe58123a481b8851bf86f6c78c11372fcd3bf120e6cd39eb1dc17",
+     "records_written": 490,
+     "replacements": {
+      "person_name": 1635,
+      "street_address": 67
+     },
+     "residual_detections": {
+      "person_name": 3
+     }
+    }
+   },
+   "verified": "ids, state_ids, qids, type/label/soft_label/src, criteria and instructions unchanged; user_id replaced in every record; all anchors re-verified on the release text (A 490/490, B 490/490); deterministic rerun byte-identical; states rewritten A 150, B 129"
+  },
+  "renderer_process_notes": [
+   "Half B (Claude Opus 5.5): some states were revised by their renderer to fix anchors or remove details not in the input, and two states had item order restored; every kept state passed the same anchor check.",
+   "Half A (gpt-6-astra) had a single attempt per state with no feedback; all 490 passed the anchor check."
+  ],
+  "schema": "muse-test-commitment-v1",
+  "shortcut_baselines": {
+   "test": {
+    "apply_memory": {
+     "best": "first_option",
+     "best_acc": 0.5,
+     "chance": 0.5,
+     "excess_pts": 0.0,
+     "n": 302
+    },
+    "forgotten_violation": {
+     "best": "majority",
+     "best_acc": 0.5017,
+     "chance": 0.5,
+     "excess_pts": 0.17,
+     "n": 301
+    },
+    "needs_approval": {
+     "best": "first_option",
+     "best_acc": 0.5,
+     "chance": 0.5,
+     "excess_pts": 0.0,
+     "n": 298
+    },
+    "notify_level": {
+     "best": "first_option",
+     "best_acc": 0.2524,
+     "chance": 0.25,
+     "excess_pts": 0.24,
+     "n": 313
+    },
+    "pick_option": {
+     "best": "priciest",
+     "best_acc": 0.347,
+     "chance": 0.2757,
+     "excess_pts": 7.13,
+     "n": 300
+    },
+    "route": {
+     "best": "majority",
+     "best_acc": 0.1711,
+     "chance": 0.1667,
+     "excess_pts": 0.44,
+     "n": 339
+    },
+    "share_ok": {
+     "best": "majority",
+     "best_acc": 0.5017,
+     "chance": 0.5,
+     "excess_pts": 0.17,
+     "n": 303
+    }
+   },
+   "test-a.release": {
+    "apply_memory": {
+     "best": "majority",
+     "best_acc": 0.5034,
+     "chance": 0.5,
+     "excess_pts": 0.34,
+     "n": 145
+    },
+    "forgotten_violation": {
+     "best": "first_option",
+     "best_acc": 0.5,
+     "chance": 0.5,
+     "excess_pts": 0.0,
+     "n": 152
+    },
+    "needs_approval": {
+     "best": "first_option",
+     "best_acc": 0.5034,
+     "chance": 0.5,
+     "excess_pts": 0.34,
+     "n": 147
+    },
+    "notify_level": {
+     "best": "first_option",
+     "best_acc": 0.2516,
+     "chance": 0.25,
+     "excess_pts": 0.16,
+     "n": 155
+    },
+    "pick_option": {
+     "best": "priciest",
+     "best_acc": 0.3826,
+     "chance": 0.2731,
+     "excess_pts": 10.95,
+     "n": 155
+    },
+    "route": {
+     "best": "majority",
+     "best_acc": 0.1716,
+     "chance": 0.1667,
+     "excess_pts": 0.49,
+     "n": 169
+    },
+    "share_ok": {
+     "best": "first_option",
+     "best_acc": 0.5,
+     "chance": 0.5,
+     "excess_pts": 0.0,
+     "n": 150
+    }
+   },
+   "test-b.release": {
+    "apply_memory": {
+     "best": "first_option",
+     "best_acc": 0.5032,
+     "chance": 0.5,
+     "excess_pts": 0.32,
+     "n": 157
+    },
+    "forgotten_violation": {
+     "best": "majority",
+     "best_acc": 0.5034,
+     "chance": 0.5,
+     "excess_pts": 0.34,
+     "n": 149
+    },
+    "needs_approval": {
+     "best": "majority",
+     "best_acc": 0.5033,
+     "chance": 0.5,
+     "excess_pts": 0.33,
+     "n": 151
+    },
+    "notify_level": {
+     "best": "first_option",
+     "best_acc": 0.2532,
+     "chance": 0.25,
+     "excess_pts": 0.32,
+     "n": 158
+    },
+    "pick_option": {
+     "best": "priciest",
+     "best_acc": 0.3077,
+     "chance": 0.2784,
+     "excess_pts": 2.93,
+     "n": 145
+    },
+    "route": {
+     "best": "first_option",
+     "best_acc": 0.1706,
+     "chance": 0.1667,
+     "excess_pts": 0.39,
+     "n": 170
+    },
+    "share_ok": {
+     "best": "majority",
+     "best_acc": 0.5033,
+     "chance": 0.5,
+     "excess_pts": 0.33,
+     "n": 153
+    }
+   }
+  },
+  "shortcut_note": "Amendment 5 reporting: pick_option 'priciest' is +7.1 pts over chance on TEST (n=300; A +10.9, B +2.9; identical before pseudonymization, so structural to option sampling, not rendering); most_popular is below chance. All other families within 0.5 pts. Report next to every pick_option TEST result.",
+  "test": {
+   "definition": "TEST = test.jsonl = byte concatenation of release/test-a.release.jsonl then release/test-b.release.jsonl (pseudonymized by export-release; published as test_a.jsonl and test_b.jsonl); test.prompts.jsonl (id, state, questions: type/instructions/criteria/src) and test.labels.jsonl (id, state_id, half, renderer, style_id, per-question family/label/soft_label/variant) are derived from it",
+   "distinct_pseudonymous_users": 654,
+   "families": {
+    "apply_memory": 302,
+    "forgotten_violation": 301,
+    "needs_approval": 372,
+    "notify_level": 446,
+    "pick_option": 340,
+    "route": 339,
+    "share_ok": 406
+   },
+   "files": {
+    "release/test-a.release.jsonl": {
+     "bytes": 4616236,
+     "count": 490,
+     "published_as": "test_a.jsonl",
+     "sha256": "b2fade9778c1bb61472bb9eeb6635c520f0c3b90e3fe5352a66b33c1a56fef26"
+    },
+    "release/test-b.release.jsonl": {
+     "bytes": 4130092,
+     "count": 490,
+     "published_as": "test_b.jsonl",
+     "sha256": "d7907b2a966ba8706203640383a4e7cf641fee73bf935ed3319f0789a1a31d8a"
+    },
+    "test.jsonl": {
+     "bytes": 8746328,
+     "count": 980,
+     "sha256": "131d092796bb518b3134eef5ca9fe3f86ec9b6ae5535de6483f8e47a25e279a3"
+    },
+    "test.labels.jsonl": {
+     "bytes": 382238,
+     "count": 980,
+     "sha256": "ecddda12dcefe8a827ffdc20e87047db69f6c35922b67645041e35014d01af5f"
+    },
+    "test.prompts.jsonl": {
+     "bytes": 7575953,
+     "count": 980,
+     "sha256": "3bceaa41e3dee6a985868c37fdcfcee7059be5eee3c7303ad8243a7e3a03f64d"
+    }
+   },
+   "halves": {
+    "A": {
+     "distinct_pseudonymous_users": 325,
+     "families": {
+      "apply_memory": 145,
+      "forgotten_violation": 152,
+      "needs_approval": 182,
+      "notify_level": 225,
+      "pick_option": 179,
+      "route": 169,
+      "share_ok": 200
+     },
+     "id_prefix": "muse/test-a/20261004/",
+     "kb_users": 360,
+     "questions": 1252,
+     "records": 490,
+     "renderer": "gpt-6-astra",
+     "scorable_families": {
+      "apply_memory": 145,
+      "forgotten_violation": 152,
+      "needs_approval": 147,
+      "notify_level": 155,
+      "pick_option": 155,
+      "route": 169,
+      "share_ok": 150
+     },
+     "scorable_questions": 1073
+    },
+    "B": {
+     "distinct_pseudonymous_users": 329,
+     "families": {
+      "apply_memory": 157,
+      "forgotten_violation": 149,
+      "needs_approval": 190,
+      "notify_level": 221,
+      "pick_option": 161,
+      "route": 170,
+      "share_ok": 206
+     },
+     "id_prefix": "muse/test-b/20261004/",
+     "kb_users": 360,
+     "questions": 1254,
+     "records": 490,
+     "renderer": "claude-opus-5-5",
+     "scorable_families": {
+      "apply_memory": 157,
+      "forgotten_violation": 149,
+      "needs_approval": 151,
+      "notify_level": 158,
+      "pick_option": 145,
+      "route": 170,
+      "share_ok": 153
+     },
+     "scorable_questions": 1083
+    }
+   },
+   "questions": 2506,
+   "records": 980,
+   "scorable_families": {
+    "apply_memory": 302,
+    "forgotten_violation": 301,
+    "needs_approval": 298,
+    "notify_level": 313,
+    "pick_option": 300,
+    "route": 339,
+    "share_ok": 303
+   },
+   "scorable_questions": 2156
+  },
+  "validity": {
+   "test": {
+    "null_baselines": true,
+    "oracle": true,
+    "passed": true
+   },
+   "test-a.release": {
+    "null_baselines": true,
+    "oracle": true,
+    "passed": true
+   },
+   "test-b.release": {
+    "null_baselines": true,
+    "oracle": true,
+    "passed": true
+   }
+  },
+  "validity_note": "decision-eval validity (commit 995c1d8) was run on the TEST file and on each released half"
+ },
+ "train_val": {
+  "family_weights": {
+   "apply_memory": 0.82,
+   "forgotten_violation": 0.85,
+   "needs_approval": 1.2,
+   "notify_level": 1.3,
+   "pick_option": 3.05,
+   "route": 1.1,
+   "share_ok": 1.12
+  },
+  "generator_commit": "bd99a3a",
+  "p_buried": 0.25,
+  "render_tokens_all_generation": 5816441,
+  "seeds": {
+   "train": 11,
+   "val": 12
+  },
+  "splits": {
+   "train.v2-5k": {
+    "balance": {
+     "apply_memory": {
+      "ambiguous_ties": 0,
+      "hard": 651,
+      "hard_answer_position_counts": {},
+      "hard_label_counts": {
+       "false": 325,
+       "true": 326
+      },
+      "n": 651,
+      "scorable": 651,
+      "soft": 0,
+      "variants": {
+       "buried+clean": 149,
+       "clean": 502
+      }
+     },
+     "forgotten_violation": {
+      "ambiguous_ties": 0,
+      "hard": 606,
+      "hard_answer_position_counts": {},
+      "hard_label_counts": {
+       "false": 303,
+       "true": 303
+      },
+      "n": 606,
+      "scorable": 606,
+      "soft": 0,
+      "variants": {
+       "buried+clean": 132,
+       "buried+removed": 21,
+       "clean": 377,
+       "removed": 76
+      }
+     },
+     "needs_approval": {
+      "ambiguous_ties": 162,
+      "hard": 615,
+      "hard_answer_position_counts": {},
+      "hard_label_counts": {
+       "false": 308,
+       "true": 307
+      },
+      "n": 777,
+      "scorable": 615,
+      "soft": 162,
+      "variants": {
+       "buried+clean": 127,
+       "buried+override": 8,
+       "buried+removed": 41,
+       "clean": 436,
+       "override": 44,
+       "removed": 121
+      }
+     },
+     "notify_level": {
+      "ambiguous_ties": 213,
+      "hard": 609,
+      "hard_answer_position_counts": {},
+      "hard_label_counts": {
+       "0": 153,
+       "1": 152,
+       "2": 152,
+       "3": 152
+      },
+      "n": 822,
+      "scorable": 609,
+      "soft": 213,
+      "variants": {
+       "buried+clean": 153,
+       "buried+override": 4,
+       "buried+removed": 52,
+       "clean": 416,
+       "override": 36,
+       "removed": 161
+      }
+     },
+     "pick_option": {
+      "ambiguous_ties": 78,
+      "hard": 625,
+      "hard_answer_position_counts": {
+       "3": {
+        "0": 98,
+        "1": 97,
+        "2": 98
+       },
+       "4": {
+        "0": 43,
+        "1": 42,
+        "2": 42,
+        "3": 43
+       },
+       "5": {
+        "0": 32,
+        "1": 32,
+        "2": 33,
+        "3": 32,
+        "4": 33
+       }
+      },
+      "hard_label_counts": {},
+      "n": 703,
+      "scorable": 625,
+      "soft": 78,
+      "variants": {
+       "buried+clean": 136,
+       "buried+override": 17,
+       "buried+removed": 21,
+       "clean": 402,
+       "override": 70,
+       "removed": 57
+      }
+     },
+     "route": {
+      "ambiguous_ties": 0,
+      "hard": 609,
+      "hard_answer_position_counts": {
+       "6": {
+        "0": 101,
+        "1": 102,
+        "2": 101,
+        "3": 102,
+        "4": 102,
+        "5": 101
+       }
+      },
+      "hard_label_counts": {
+       "ask_user": 102,
+       "calendar": 101,
+       "email": 101,
+       "flights": 101,
+       "restaurants": 102,
+       "shopping": 102
+      },
+      "n": 609,
+      "scorable": 609,
+      "soft": 0,
+      "variants": {
+       "buried+clean": 103,
+       "buried+override": 56,
+       "clean": 319,
+       "override": 131
+      }
+     },
+     "share_ok": {
+      "ambiguous_ties": 207,
+      "hard": 626,
+      "hard_answer_position_counts": {},
+      "hard_label_counts": {
+       "false": 313,
+       "true": 313
+      },
+      "n": 833,
+      "scorable": 626,
+      "soft": 207,
+      "variants": {
+       "buried+clean": 106,
+       "buried+override": 58,
+       "buried+removed": 52,
+       "clean": 309,
+       "override": 153,
+       "removed": 155
+      }
+     }
+    },
+    "buried_states": 490,
+    "index_cut": 2670,
+    "per_family": {
+     "apply_memory": 651,
+     "forgotten_violation": 606,
+     "needs_approval": 777,
+     "notify_level": 822,
+     "pick_option": 703,
+     "route": 609,
+     "share_ok": 833
+    },
+    "questions": 5001,
+    "questions_per_state": 2.539,
+    "render": {
+     "drop_rate": 0.0,
+     "dropped": 0,
+     "drops_by_reason": {},
+     "kept": 1970,
+     "requests": 1970,
+     "retries": {
+      "connection": 0,
+      "rate_limited": 69,
+      "server_error": 0
+     },
+     "skipped_no_compatible_fragment": 700,
+     "tokens": {
+      "input_tokens": 2174451,
+      "output_tokens": 1332903
+     }
+    },
+    "sft_token_lengths": {
+     "direct": {
+      "ambiguous_excluded": 660,
+      "max_prompt_tokens": 8649,
+      "mean": 1856.3,
+      "p50": 949,
+      "p95": 6392,
+      "prompt_tokens_total": 8058092,
+      "rows": 4341,
+      "rows_sha256": "1feeec77718f634669a190159648909370e6a2c689ffaa8ed8e0ee4a03cd52c4",
+      "sidecar": "work/muse/data/train.v2-5k.sft.direct.jsonl.meta.json"
+     }
+    },
+    "sha256": "a75d1ebe792e9ad2dcf5aac2d9aee7039a048ccab8d91be75f6882029f0f964a",
+    "shortcut_baselines": {
+     "best_shortcut_per_family": {
+      "apply_memory": 0.5008,
+      "forgotten_violation": 0.5,
+      "needs_approval": 0.5008,
+      "notify_level": 0.2512,
+      "pick_option": 0.2883,
+      "route": 0.1675,
+      "share_ok": 0.5
+     },
+     "per_family": {
+      "apply_memory": {
+       "centroid": null,
+       "chance": 0.5,
+       "cheapest": null,
+       "first_option": 0.4992,
+       "least_popular": null,
+       "majority": 0.5008,
+       "medoid": null,
+       "most_popular": null,
+       "n": 651,
+       "priciest": null,
+       "soft_labelled_excluded": 0
+      },
+      "forgotten_violation": {
+       "centroid": null,
+       "chance": 0.5,
+       "cheapest": null,
+       "first_option": 0.5,
+       "least_popular": null,
+       "majority": 0.5,
+       "medoid": null,
+       "most_popular": null,
+       "n": 606,
+       "priciest": null,
+       "soft_labelled_excluded": 0
+      },
+      "needs_approval": {
+       "centroid": null,
+       "chance": 0.5,
+       "cheapest": null,
+       "first_option": 0.5008,
+       "least_popular": null,
+       "majority": 0.5008,
+       "medoid": null,
+       "most_popular": null,
+       "n": 615,
+       "priciest": null,
+       "soft_labelled_excluded": 162
+      },
+      "notify_level": {
+       "centroid": null,
+       "chance": 0.25,
+       "cheapest": null,
+       "first_option": 0.2512,
+       "least_popular": null,
+       "majority": 0.2512,
+       "medoid": null,
+       "most_popular": null,
+       "n": 609,
+       "priciest": null,
+       "soft_labelled_excluded": 213
+      },
+      "pick_option": {
+       "centroid": 0.288,
+       "chance": 0.2761,
+       "cheapest": 0.2297,
+       "first_option": 0.2768,
+       "least_popular": 0.2544,
+       "majority": 0.0128,
+       "medoid": 0.2816,
+       "most_popular": 0.2576,
+       "n": 625,
+       "priciest": 0.2883,
+       "soft_labelled_excluded": 78
+      },
+      "route": {
+       "centroid": null,
+       "chance": 0.1667,
+       "cheapest": null,
+       "first_option": 0.1658,
+       "least_popular": null,
+       "majority": 0.1675,
+       "medoid": null,
+       "most_popular": null,
+       "n": 609,
+       "priciest": null,
+       "soft_labelled_excluded": 0
+      },
+      "share_ok": {
+       "centroid": null,
+       "chance": 0.5,
+       "cheapest": null,
+       "first_option": 0.5,
+       "least_popular": null,
+       "majority": 0.5,
+       "medoid": null,
+       "most_popular": null,
+       "n": 626,
+       "priciest": null,
+       "soft_labelled_excluded": 207
+      }
+     }
+    },
+    "states": 1970,
+    "users": 1331
+   },
+   "val": {
+    "balance": {
+     "apply_memory": {
+      "ambiguous_ties": 0,
+      "hard": 109,
+      "hard_answer_position_counts": {},
+      "hard_label_counts": {
+       "false": 55,
+       "true": 54
+      },
+      "n": 109,
+      "scorable": 109,
+      "soft": 0,
+      "variants": {
+       "buried+clean": 29,
+       "clean": 80
+      }
+     },
+     "forgotten_violation": {
+      "ambiguous_ties": 0,
+      "hard": 116,
+      "hard_answer_position_counts": {},
+      "hard_label_counts": {
+       "false": 58,
+       "true": 58
+      },
+      "n": 116,
+      "scorable": 116,
+      "soft": 0,
+      "variants": {
+       "buried+clean": 23,
+       "buried+removed": 4,
+       "clean": 78,
+       "removed": 11
+      }
+     },
+     "needs_approval": {
+      "ambiguous_ties": 22,
+      "hard": 118,
+      "hard_answer_position_counts": {},
+      "hard_label_counts": {
+       "false": 59,
+       "true": 59
+      },
+      "n": 140,
+      "scorable": 118,
+      "soft": 22,
+      "variants": {
+       "buried+clean": 23,
+       "buried+override": 3,
+       "buried+removed": 5,
+       "clean": 83,
+       "override": 9,
+       "removed": 17
+      }
+     },
+     "notify_level": {
+      "ambiguous_ties": 42,
+      "hard": 110,
+      "hard_answer_position_counts": {},
+      "hard_label_counts": {
+       "0": 28,
+       "1": 27,
+       "2": 27,
+       "3": 28
+      },
+      "n": 152,
+      "scorable": 110,
+      "soft": 42,
+      "variants": {
+       "buried+clean": 31,
+       "buried+removed": 9,
+       "clean": 74,
+       "override": 5,
+       "removed": 33
+      }
+     },
+     "pick_option": {
+      "ambiguous_ties": 15,
+      "hard": 125,
+      "hard_answer_position_counts": {
+       "3": {
+        "0": 18,
+        "1": 17,
+        "2": 17
+       },
+       "4": {
+        "0": 10,
+        "1": 11,
+        "2": 10,
+        "3": 10
+       },
+       "5": {
+        "0": 6,
+        "1": 7,
+        "2": 7,
+        "3": 6,
+        "4": 6
+       }
+      },
+      "hard_label_counts": {},
+      "n": 140,
+      "scorable": 125,
+      "soft": 15,
+      "variants": {
+       "buried+clean": 28,
+       "buried+override": 5,
+       "buried+removed": 4,
+       "clean": 80,
+       "override": 12,
+       "removed": 11
+      }
+     },
+     "route": {
+      "ambiguous_ties": 0,
+      "hard": 95,
+      "hard_answer_position_counts": {
+       "6": {
+        "0": 16,
+        "1": 15,
+        "2": 16,
+        "3": 16,
+        "4": 16,
+        "5": 16
+       }
+      },
+      "hard_label_counts": {
+       "ask_user": 16,
+       "calendar": 16,
+       "email": 16,
+       "flights": 15,
+       "restaurants": 16,
+       "shopping": 16
+      },
+      "n": 95,
+      "scorable": 95,
+      "soft": 0,
+      "variants": {
+       "buried+clean": 14,
+       "buried+override": 10,
+       "clean": 50,
+       "override": 21
+      }
+     },
+     "share_ok": {
+      "ambiguous_ties": 34,
+      "hard": 111,
+      "hard_answer_position_counts": {},
+      "hard_label_counts": {
+       "false": 56,
+       "true": 55
+      },
+      "n": 145,
+      "scorable": 111,
+      "soft": 34,
+      "variants": {
+       "buried+clean": 22,
+       "buried+override": 12,
+       "buried+removed": 8,
+       "clean": 46,
+       "override": 31,
+       "removed": 26
+      }
+     }
+    },
+    "buried_states": 91,
+    "index_cut": null,
+    "per_family": {
+     "apply_memory": 109,
+     "forgotten_violation": 116,
+     "needs_approval": 140,
+     "notify_level": 152,
+     "pick_option": 140,
+     "route": 95,
+     "share_ok": 145
+    },
+    "questions": 897,
+    "questions_per_state": 2.513,
+    "render": {
+     "drop_rate": 0.0,
+     "dropped": 0,
+     "drops_by_reason": {},
+     "kept": 357,
+     "requests": 357,
+     "retries": {
+      "connection": 0,
+      "rate_limited": 22,
+      "server_error": 0
+     },
+     "skipped_no_compatible_fragment": 141,
+     "tokens": {
+      "input_tokens": 398096,
+      "output_tokens": 244321
+     }
+    },
+    "sft_token_lengths": {
+     "assistant": {
+      "ambiguous_excluded": 113,
+      "max_prompt_tokens": 8710,
+      "mean": 2016.9,
+      "p50": 992,
+      "p95": 6675,
+      "prompt_tokens_total": 1581231,
+      "rows": 784,
+      "rows_sha256": "9bd262d83391ed2ff5c66aee911907047206611f6dd8692978686d09fdaeb410",
+      "sidecar": "work/muse/data/val.sft.assistant.jsonl.meta.json"
+     },
+     "direct": {
+      "ambiguous_excluded": 113,
+      "max_prompt_tokens": 8659,
+      "mean": 1965.9,
+      "p50": 941,
+      "p95": 6624,
+      "prompt_tokens_total": 1541247,
+      "rows": 784,
+      "rows_sha256": "dcea568122c03ce721f10971f20f100b1bb6a2388f4232efb1679cee1979fd30",
+      "sidecar": "work/muse/data/val.sft.direct.jsonl.meta.json"
+     },
+     "evidence": {
+      "ambiguous_excluded": 113,
+      "max_prompt_tokens": 8700,
+      "mean": 2005.9,
+      "p50": 980,
+      "p95": 6663,
+      "prompt_tokens_total": 1572622,
+      "rows": 784,
+      "rows_sha256": "25729dc9897790d45882d29d8d653197b83fbec60d74fa3b445f27d029aed695",
+      "sidecar": "work/muse/data/val.sft.evidence.jsonl.meta.json"
+     }
+    },
+    "sha256": "dd5334a4e9cef8051b3ca994b85c4142d16dd7e4a0d15272b92206ed4c792fc2",
+    "shortcut_baselines": {
+     "best_shortcut_per_family": {
+      "apply_memory": 0.5046,
+      "forgotten_violation": 0.5,
+      "needs_approval": 0.5,
+      "notify_level": 0.2545,
+      "pick_option": 0.3137,
+      "route": 0.1684,
+      "share_ok": 0.5045
+     },
+     "per_family": {
+      "apply_memory": {
+       "centroid": null,
+       "chance": 0.5,
+       "cheapest": null,
+       "first_option": 0.5046,
+       "least_popular": null,
+       "majority": 0.5046,
+       "medoid": null,
+       "most_popular": null,
+       "n": 109,
+       "priciest": null,
+       "soft_labelled_excluded": 0
+      },
+      "forgotten_violation": {
+       "centroid": null,
+       "chance": 0.5,
+       "cheapest": null,
+       "first_option": 0.5,
+       "least_popular": null,
+       "majority": 0.5,
+       "medoid": null,
+       "most_popular": null,
+       "n": 116,
+       "priciest": null,
+       "soft_labelled_excluded": 0
+      },
+      "needs_approval": {
+       "centroid": null,
+       "chance": 0.5,
+       "cheapest": null,
+       "first_option": 0.5,
+       "least_popular": null,
+       "majority": 0.5,
+       "medoid": null,
+       "most_popular": null,
+       "n": 118,
+       "priciest": null,
+       "soft_labelled_excluded": 22
+      },
+      "notify_level": {
+       "centroid": null,
+       "chance": 0.25,
+       "cheapest": null,
+       "first_option": 0.2545,
+       "least_popular": null,
+       "majority": 0.2545,
+       "medoid": null,
+       "most_popular": null,
+       "n": 110,
+       "priciest": null,
+       "soft_labelled_excluded": 42
+      },
+      "pick_option": {
+       "centroid": 0.312,
+       "chance": 0.2719,
+       "cheapest": 0.3137,
+       "first_option": 0.272,
+       "least_popular": 0.16,
+       "majority": 0.016,
+       "medoid": 0.312,
+       "most_popular": 0.304,
+       "n": 125,
+       "priciest": 0.2843,
+       "soft_labelled_excluded": 15
+      },
+      "route": {
+       "centroid": null,
+       "chance": 0.1667,
+       "cheapest": null,
+       "first_option": 0.1684,
+       "least_popular": null,
+       "majority": 0.1684,
+       "medoid": null,
+       "most_popular": null,
+       "n": 95,
+       "priciest": null,
+       "soft_labelled_excluded": 0
+      },
+      "share_ok": {
+       "centroid": null,
+       "chance": 0.5,
+       "cheapest": null,
+       "first_option": 0.5045,
+       "least_popular": null,
+       "majority": 0.5045,
+       "medoid": null,
+       "most_popular": null,
+       "n": 111,
+       "priciest": null,
+       "soft_labelled_excluded": 34
+      }
+     }
+    },
+    "states": 357,
+    "users": 251
+   }
+  }
+ }
+}

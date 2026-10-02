@@ -1,0 +1,10 @@
+# build products (the released PDF is ../pev.pdf)
+main.pdf
+main.aux
+main.bbl
+main.blg
+main.log
+main.out
+main.fls
+main.fdb_latexmk
+main.synctex.gz

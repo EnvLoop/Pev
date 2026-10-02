@@ -1,0 +1,8 @@
+{
+  "style_id": "pub-chatlog-en",
+  "voice": "a raw chat transcript between the user and their assistant, plus short system notes from the assistant's memory service",
+  "format": "timestamped chat lines like '[2024-03-05 18:42] user: ...' and '[...] assistant: ...'; rules and facts appear as things the user said in chat or as '(memory)' system lines; the pending item is the latest message at the end",
+  "language_mix": "English only",
+  "verbosity": "conversational, medium length; casual phrasing, contractions, occasional typos in the user's lines but never inside VERBATIM strings",
+  "notes": "Use ISO-like timestamps for chat lines. Keep each dated fact attached to its own dated line."
+}

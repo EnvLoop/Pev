@@ -1,0 +1,53 @@
+{
+ "candidate": "adapter",
+ "models": [
+  {
+   "name": "adapter",
+   "label": "adapter r2-mix-s20260930",
+   "preds": "../../work/muse/test-eval/preds/adapter.test.jsonl",
+   "temperature": "../../work/muse/test-eval/calibration/adapter-temperature.json",
+   "thresholds": "../../work/muse/test-eval/calibration/adapter-thresholds.json",
+   "local": true
+  },
+  {
+   "name": "b0",
+   "label": "B0 Qwen3.8-27B",
+   "preds": "../../work/muse/test-eval/preds/b0.test.jsonl",
+   "temperature": "../../work/muse/test-eval/calibration/b0-temperature.json",
+   "thresholds": "../../work/muse/test-eval/calibration/b0-thresholds.json",
+   "local": true
+  },
+  {
+   "name": "qwen3.5-4b",
+   "label": "Qwen3.5-4B",
+   "preds": "../../work/muse/test-eval/preds/qwen3.5-4b.test.jsonl",
+   "temperature": "../../work/muse/test-eval/calibration/qwen3.5-4b-temperature.json",
+   "thresholds": "../../work/muse/test-eval/calibration/qwen3.5-4b-thresholds.json",
+   "local": true
+  },
+  {
+   "name": "kev-27b",
+   "label": "Kev-27B",
+   "preds": "../../work/muse/test-eval/preds/kev-27b.test.jsonl",
+   "temperature": "../../work/muse/test-eval/calibration/kev-27b-temperature.json",
+   "thresholds": "../../work/muse/test-eval/calibration/kev-27b-thresholds.json",
+   "local": true
+  },
+  {
+   "name": "jev",
+   "label": "Jev jev-1.13.0",
+   "preds": "../../work/muse/test-eval/preds/jev.test.jsonl",
+   "temperature": 1.0,
+   "thresholds": null,
+   "local": false
+  },
+  {
+   "name": "astra",
+   "label": "gpt-6-astra",
+   "preds": "../../work/muse/test-eval/preds/astra.test.jsonl",
+   "temperature": 1.0,
+   "thresholds": null,
+   "local": false
+  }
+ ]
+}

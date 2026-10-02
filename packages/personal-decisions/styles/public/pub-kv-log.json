@@ -1,0 +1,8 @@
+{
+  "style_id": "pub-kv-log",
+  "voice": "machine-ish structured log exported from the assistant platform",
+  "format": "one line per record as 'key=value' pairs or YAML-like blocks (type: memory|rule|update|contact|calendar|pending); timestamps in the form 05/03/2024 18:42 (day/month/year)",
+  "language_mix": "English only",
+  "verbosity": "terse; no prose sentences except inside quoted values",
+  "notes": "Put the pending item last, with options as a list under 'options:'."
+}

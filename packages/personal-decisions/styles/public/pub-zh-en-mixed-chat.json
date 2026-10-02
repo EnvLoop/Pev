@@ -1,0 +1,8 @@
+{
+  "style_id": "pub-zh-en-mixed-chat",
+  "voice": "a bilingual user chatting with their assistant on a messaging app; the assistant keeps short notes",
+  "format": "chat messages with short timestamps like '3/5 18:42'; some messages entirely in Chinese, some in English, some code-switched mid-sentence; the pending item is the last message",
+  "language_mix": "mixed Simplified Chinese and English, roughly half and half; VERBATIM strings stay exactly as given in their original language",
+  "verbosity": "short chat bursts, several messages per topic",
+  "notes": "Use Chinese for connective text like 记得, 以后, 帮我, 不要; never translate or paraphrase VERBATIM strings. Always write full dates somewhere near dated facts (e.g. 2024-03-05)."
+}
