@@ -3,10 +3,12 @@
 **A calibrated fast-decision model for personal agents with long-term memory, and the pre-registered benchmark it
 was evaluated on.**
 
+[Paper page](https://envloop.ai/research/pev) ·
 [Paper (PDF)](docs/tech-report/pev.pdf) ·
 [Model](https://huggingface.co/EnvLoop/Pev-27B-LoRA) ·
 [Dataset](https://huggingface.co/datasets/EnvLoop/Pev-Bench) ·
-[Leaderboard](https://huggingface.co/spaces/EnvLoop/Pev-Leaderboard) ·
+[Leaderboard](https://envloop.ai/leaderboard/pev-bench) ·
+[Leaderboard Space](https://huggingface.co/spaces/EnvLoop/Pev-Leaderboard) ·
 [Collection](https://huggingface.co/collections/EnvLoop/pev-6abf32b6b1940477ad4c52c3) ·
 [License](#license)
 
